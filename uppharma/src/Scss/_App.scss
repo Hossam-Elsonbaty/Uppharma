@@ -1,0 +1,123 @@
+@import '../Scss/Media';
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  overflow-x: hidden;
+  direction: rtl;
+  // font-family: "Euclid Circular A", "Poppins";
+}
+:root {
+  --primary-100:#FF7F50;
+  --primary-200:#dd6236;
+  --primary-300:#8f1e00;
+  --accent-100:#8B4513;
+  --accent-200:#ffd299;
+  --text-100:#000000;
+  --text-200:#2c2c2c;
+  --bg-White:#fff;
+  --bg-100:#F7EEDD;
+  --bg-200:#ede4d3;
+  --bg-300:#c4bcab;
+}
+body{
+  background-color: var(--bg-100);
+  @include breakpoint(desktop){
+    background-color: rgb(255, 255, 255);
+  }
+}
+// NavBar
+.Nav-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  .navbar:nth-child(2){
+    background-color: var(--bg-White);
+  }
+  .navbar {
+    background-color: var(--primary-100);
+    width: 100%;
+    color: white;
+    z-index: 1000;
+    .navbar-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      .search-bar {
+        display: flex;
+        flex: 1;
+        margin: 0 20px;
+        width: 100%;
+        input {
+          flex: 1;
+          padding: 5px;
+          border: none;
+          border-radius: 3px 0 0 3px;
+        }
+        button {
+          padding: 5px;
+          border: none;
+          background-color: #555;
+          color: white;
+          border-radius: 0 3px 3px 0;
+          cursor: pointer;
+        }
+      }
+      .nav-icons {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 25px;
+        .icon {
+          font-size: 1.5em;
+          cursor: pointer;
+        }
+      }
+    }
+    .second-navbar-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      .logo{
+        img{
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .nav-bars{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+        width: 30px;
+        .bar{
+          width: 100%;
+          height: 5px;
+          background-color: #000000;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+// end Navbar
