@@ -1,11 +1,10 @@
 @import '../Scss/Media';
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 * {
-  box-sizing: border-box;
   margin: 0;
   font-family: "Cairo", sans-serif;
-  overflow-x: hidden;
   direction: rtl;
+  box-sizing: border-box;
   // font-family: "Euclid Circular A", "Poppins";
 }
 :root {
@@ -24,19 +23,20 @@
 body{
   background-color: var(--bg-100);
   @include breakpoint(desktop){
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-100);
   }
 }
-// NavBar
-.Nav-header{
+//NavBar
+.main{
+  height: 100vh;
+}
+.nav-header{
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   position: fixed;
   top: 0;
   width: 100%;
-  .navbar {
+  .first-navbar {
     background-color: var(--primary-100);
     width: 100%;
     color: white;
@@ -48,10 +48,6 @@ body{
       align-items: center;
       gap: 10px;
       padding: 10px 20px;
-      .logo {
-        font-size: 1.5em;
-        font-weight: bold;
-      }
       .search-bar {
         display: flex;
         flex: 1;
@@ -61,14 +57,16 @@ body{
           flex: 1;
           padding: 5px;
           border: none;
-          border-radius: 3px 0 0 3px;
+          outline: none;
+          border-radius: 0 3px 3px 0;
         }
         button {
           padding: 5px;
           border: none;
-          background-color: #555;
+          border: none;
+          background-color: var(--accent-100);
           color: white;
-          border-radius: 0 3px 3px 0;
+          border-radius: 3px 0 0 3px;
           cursor: pointer;
         }
       }
@@ -84,9 +82,11 @@ body{
       }
     }
   }
-  .navbar:nth-child(2){
+  .second-navbar{
     background-color: var(--bg-White);
-    .second-navbar-container{
+    width: 100%;
+    position: relative;
+    .navbar-container{
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -114,59 +114,57 @@ body{
       }
     }
   }
-}
-.menu {
-  width: 190px;
-  background-color: var(--accent-100);
-  position: fixed;
-  top: 17%;
-  left: 5%;
-  transition: right 0.3s ease-out, opacity 0.3s ease-out;
-  opacity: 0;
-  z-index: 1000;
-  border-radius: 4px;
-  max-height: 305px;
-}
-.menu.open {
-  opacity: 1;
-}
-.menu-item {
-  border-bottom: 1px solid var(--primary-100);
-  background-color: var(--accent-100);
-  .menu-title {
-    padding: 10px;
-    cursor: pointer;
-    font-size: 14px;
+  .menu {
+    width: 190px;
     background-color: var(--accent-100);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &:hover{
-      background-color: var(--primary-200);
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    transition: right 0.3s ease-out, opacity 0.3s ease-out;
+    display: none;
+    z-index: 1000;
+    border-radius: 4px;
+    max-height: 305px;
+  }
+  .menu.open {
+    display: block;
+  }
+  .menu-item {
+    border-bottom: 1px solid var(--primary-100);
+    background-color: var(--accent-100);
+    .menu-title {
+      padding: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      background-color: var(--accent-100);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:hover{
+        background-color: var(--primary-200);
+      }
     }
   }
+  .arrow-icon {
+    margin-right: 10px;
+  }
+  
+  .submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .submenu.open {
+    max-height: 500px; /* Adjust based on expected content size */
+    transition: max-height 0.5s ease-in;
+  }
+  
+  .submenu .menu-item {
+    padding-right: 20px; /* Indentation for nested items */
+    background-color: #e0e0e0;
+  }
 }
-.arrow-icon {
-  margin-right: 10px;
-}
-
-.submenu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
-
-.submenu.open {
-  max-height: 500px; /* Adjust based on expected content size */
-  transition: max-height 0.5s ease-in;
-}
-
-.submenu .menu-item {
-  padding-right: 20px; /* Indentation for nested items */
-  background-color: #e0e0e0;
-}
-
-
-
 // end Navbar
+

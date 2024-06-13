@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 * {
-  box-sizing: border-box;
   margin: 0;
   font-family: "Cairo", sans-serif;
-  overflow-x: hidden;
   direction: rtl;
+  box-sizing: border-box;
 }
 
 :root {
@@ -26,26 +25,28 @@ body {
 }
 @media (min-width: 768px) {
   body {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-100);
   }
 }
 
-.Nav-header {
+.main {
+  height: 100vh;
+}
+
+.nav-header {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   position: fixed;
   top: 0;
   width: 100%;
 }
-.Nav-header .navbar {
+.nav-header .first-navbar {
   background-color: var(--primary-100);
   width: 100%;
   color: white;
   z-index: 1000;
 }
-.Nav-header .navbar .navbar-container {
+.nav-header .first-navbar .navbar-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,55 +54,55 @@ body {
   gap: 10px;
   padding: 10px 20px;
 }
-.Nav-header .navbar .navbar-container .logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-.Nav-header .navbar .navbar-container .search-bar {
+.nav-header .first-navbar .navbar-container .search-bar {
   display: flex;
   flex: 1;
   margin: 0 20px;
   width: 100%;
 }
-.Nav-header .navbar .navbar-container .search-bar input {
+.nav-header .first-navbar .navbar-container .search-bar input {
   flex: 1;
   padding: 5px;
   border: none;
-  border-radius: 3px 0 0 3px;
+  outline: none;
+  border-radius: 0 3px 3px 0;
 }
-.Nav-header .navbar .navbar-container .search-bar button {
+.nav-header .first-navbar .navbar-container .search-bar button {
   padding: 5px;
   border: none;
-  background-color: #555;
+  border: none;
+  background-color: var(--accent-100);
   color: white;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px 0 0 3px;
   cursor: pointer;
 }
-.Nav-header .navbar .navbar-container .nav-icons {
+.nav-header .first-navbar .navbar-container .nav-icons {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   gap: 25px;
 }
-.Nav-header .navbar .navbar-container .nav-icons .icon {
+.nav-header .first-navbar .navbar-container .nav-icons .icon {
   font-size: 1.5em;
   cursor: pointer;
 }
-.Nav-header .navbar:nth-child(2) {
+.nav-header .second-navbar {
   background-color: var(--bg-White);
+  width: 100%;
+  position: relative;
 }
-.Nav-header .navbar:nth-child(2) .second-navbar-container {
+.nav-header .second-navbar .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   padding: 10px 20px;
 }
-.Nav-header .navbar:nth-child(2) .second-navbar-container .logo img {
+.nav-header .second-navbar .navbar-container .logo img {
   width: 50px;
   height: 50px;
 }
-.Nav-header .navbar:nth-child(2) .second-navbar-container .nav-bars {
+.nav-header .second-navbar .navbar-container .nav-bars {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,35 +110,32 @@ body {
   gap: 4px;
   width: 30px;
 }
-.Nav-header .navbar:nth-child(2) .second-navbar-container .nav-bars .bar {
+.nav-header .second-navbar .navbar-container .nav-bars .bar {
   width: 100%;
   height: 5px;
   background-color: var(--accent-100);
   border-radius: 5px;
 }
-
-.menu {
+.nav-header .menu {
   width: 190px;
   background-color: var(--accent-100);
-  position: fixed;
-  top: 17%;
+  position: absolute;
+  top: 100%;
   left: 5%;
   transition: right 0.3s ease-out, opacity 0.3s ease-out;
-  opacity: 0;
+  display: none;
   z-index: 1000;
   border-radius: 4px;
   max-height: 305px;
 }
-
-.menu.open {
-  opacity: 1;
+.nav-header .menu.open {
+  display: block;
 }
-
-.menu-item {
+.nav-header .menu-item {
   border-bottom: 1px solid var(--primary-100);
   background-color: var(--accent-100);
 }
-.menu-item .menu-title {
+.nav-header .menu-item .menu-title {
   padding: 10px;
   cursor: pointer;
   font-size: 14px;
@@ -147,26 +145,22 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.menu-item .menu-title:hover {
+.nav-header .menu-item .menu-title:hover {
   background-color: var(--primary-200);
 }
-
-.arrow-icon {
+.nav-header .arrow-icon {
   margin-right: 10px;
 }
-
-.submenu {
+.nav-header .submenu {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
-
-.submenu.open {
+.nav-header .submenu.open {
   max-height: 500px; /* Adjust based on expected content size */
   transition: max-height 0.5s ease-in;
 }
-
-.submenu .menu-item {
+.nav-header .submenu .menu-item {
   padding-right: 20px; /* Indentation for nested items */
   background-color: #e0e0e0;
 }/*# sourceMappingURL=App.css.map */

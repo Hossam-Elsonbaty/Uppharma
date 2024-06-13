@@ -53,8 +53,8 @@ export default function Navbar() {
     },
   ];
   return (
-    <header className='Nav-header'>
-      <nav className="navbar">
+    <header className='nav-header'>
+      <nav className="first-navbar">
         <div className="navbar-container">
           <div className="nav-icons">
             <FaUser className="icon" />
@@ -67,8 +67,8 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <nav className="navbar">
-        <div className="second-navbar-container">
+      <nav className="second-navbar">
+        <div className="navbar-container">
           <div className="logo">
             <img src={logo} alt="err"/>
           </div>
