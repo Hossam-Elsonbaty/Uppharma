@@ -7,10 +7,10 @@
 }
 
 :root {
-  --primary-100:#FF7F50;
-  --primary-200:#dd6236;
+  --primary-100:#268be3;
+  --primary-200:#366bdd;
   --primary-300:#8f1e00;
-  --accent-100:#8B4513;
+  --accent-100:#13478b;
   --accent-200:#ffd299;
   --text-100:#000000;
   --text-200:#2c2c2c;
@@ -18,6 +18,19 @@
   --bg-100:#F7EEDD;
   --bg-200:#ede4d3;
   --bg-300:#c4bcab;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #dddddd; /* color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-100); /* color of the scrollbar */
+  border-radius: 0px; /* roundness of the scrollbar */
 }
 
 body {
@@ -54,6 +67,11 @@ body {
   align-items: center;
   gap: 10px;
   padding: 10px 20px;
+}
+@media (min-width: 768px) {
+  .nav-header .first-navbar .navbar-container {
+    padding: 10px 80px;
+  }
 }
 .nav-header .first-navbar .navbar-container .search-bar {
   display: flex;
@@ -99,6 +117,11 @@ body {
   gap: 10px;
   padding: 10px 20px;
 }
+@media (min-width: 768px) {
+  .nav-header .second-navbar .navbar-container {
+    padding: 10px 80px;
+  }
+}
 .nav-header .second-navbar .navbar-container .logo img {
   width: 50px;
   height: 50px;
@@ -126,8 +149,10 @@ body {
   transition: right 0.3s ease-out, opacity 0.3s ease-out;
   display: none;
   z-index: 1000;
-  border-radius: 4px;
-  max-height: 305px;
+  border-radius: 5px;
+  padding: 0 5px;
+  max-height: 281px;
+  overflow-y: auto;
 }
 .nav-header .menu.open {
   display: block;
