@@ -1,17 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 * {
   margin: 0;
-  font-family: "Cairo", sans-serif;
-  direction: rtl;
+  font-family: "Tajawal", sans-serif, Tahoma, Arial;
   box-sizing: border-box;
 }
 
 :root {
   --primary-100:#268be3;
   --primary-200:#366bdd;
-  --primary-300:#8f1e00;
+  --primary-300:#004a8f;
   --accent-100:#13478b;
-  --accent-200:#ffd299;
+  --accent-200:#99c7ff;
   --text-100:#000000;
   --text-200:#2c2c2c;
   --bg-White:#fff;
@@ -34,16 +33,13 @@
 }
 
 body {
-  background-color: var(--bg-100);
+  background-color: var(--bg-white);
+  direction: rtl;
 }
 @media (min-width: 768px) {
   body {
-    background-color: var(--bg-100);
+    background-color: var(--bg-white);
   }
-}
-
-.main {
-  height: 100vh;
 }
 
 .nav-header {
@@ -53,6 +49,7 @@ body {
   top: 0;
   gap: 1px;
   width: 100%;
+  z-index: 1000;
 }
 .nav-header .first-navbar {
   background-color: var(--primary-100);
@@ -109,6 +106,7 @@ body {
   background-color: var(--bg-White);
   width: 100%;
   position: relative;
+  z-index: 1000;
 }
 .nav-header .second-navbar .navbar-container {
   display: flex;
@@ -189,4 +187,27 @@ body {
 .nav-header .submenu .menu-item {
   padding-right: 20px; /* Indentation for nested items */
   background-color: #e0e0e0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 160px;
+  height: calc(100vh - 160px);
+}
+.main .top-sale-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.main .top-sale-container .product-img {
+  width: 120px;
+  height: 120px;
+}
+.main .top-sale-container h2 {
+  align-self: center;
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 28px;
+  font-weight: normal;
 }/*# sourceMappingURL=App.css.map */

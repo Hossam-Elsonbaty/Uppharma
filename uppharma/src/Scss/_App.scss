@@ -1,18 +1,18 @@
 @import '../Scss/Media';
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 * {
   margin: 0;
-  font-family: "Cairo", sans-serif;
-  direction: rtl;
+  // font-family: "Cairo", sans-serif;
+  font-family: 'Tajawal', sans-serif, Tahoma, Arial;
   box-sizing: border-box;
-  // font-family: "Euclid Circular A", "Poppins";
 }
 :root {
   --primary-100:#268be3;
   --primary-200:#366bdd;
-  --primary-300:#8f1e00;
+  --primary-300:#004a8f;
   --accent-100:#13478b;
-  --accent-200:#ffd299;
+  --accent-200:#99c7ff;
   --text-100:#000000;
   --text-200:#2c2c2c;
   --bg-White:#fff;
@@ -34,15 +34,13 @@
 }
 
 body{
-  background-color: var(--bg-100);
+  background-color: var(--bg-white);
+  direction: rtl;
   @include breakpoint(desktop){
-    background-color: var(--bg-100);
+    background-color: var(--bg-white);
   }
 }
 //NavBar
-.main{
-  height: 100vh;
-}
 .nav-header{
   display: flex;
   flex-direction: column;
@@ -50,6 +48,7 @@ body{
   top: 0;
   gap: 1px;
   width: 100%;
+  z-index: 1000;
   .first-navbar {
     background-color: var(--primary-100);
     width: 100%;
@@ -103,6 +102,7 @@ body{
     background-color: var(--bg-White);
     width: 100%;
     position: relative;
+    z-index: 1000;
     .navbar-container{
       display: flex;
       justify-content: space-between;
@@ -141,7 +141,7 @@ body{
     top: 100%;
     left: 5%;
     transition: right 0.3s ease-out, opacity 0.3s ease-out;
-    display: none;
+    display:none;
     z-index: 1000;
     border-radius: 5px;
     padding:0 5px ;
@@ -187,6 +187,30 @@ body{
     padding-right: 20px; /* Indentation for nested items */
     background-color: #e0e0e0;
   }
+  // end Navbar
 }
-// end Navbar
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 160px;
+  height: calc(100vh - 160px);
+  // top sale 
+  .top-sale-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .product-img{
+      width: 120px;
+      height: 120px;
+    }
+    h2{
+      align-self: center;
+      color: rgba(26, 26, 26, 0.7);
+      font-size: 28px;
+      font-weight: normal;
+    }
+  }
+  //end top sale 
+}
 
