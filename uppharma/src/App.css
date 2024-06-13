@@ -38,6 +38,7 @@ body {
   flex-direction: column;
   position: fixed;
   top: 0;
+  gap: 1px;
   width: 100%;
 }
 .nav-header .first-navbar {
@@ -83,7 +84,7 @@ body {
   gap: 25px;
 }
 .nav-header .first-navbar .navbar-container .nav-icons .icon {
-  font-size: 1.5em;
+  font-size: 1.3em;
   cursor: pointer;
 }
 .nav-header .second-navbar {
