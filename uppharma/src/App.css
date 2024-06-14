@@ -47,7 +47,6 @@ body {
   flex-direction: column;
   position: fixed;
   top: 0;
-  gap: 1px;
   width: 100%;
   z-index: 1000;
 }
@@ -55,7 +54,6 @@ body {
   background-color: var(--primary-100);
   width: 100%;
   color: white;
-  z-index: 1000;
 }
 .nav-header .first-navbar .navbar-container {
   display: flex;
@@ -193,6 +191,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 0 15px;
   margin-top: 160px;
   height: calc(100vh - 160px);
 }
@@ -201,13 +200,74 @@ body {
   flex-direction: column;
   gap: 15px;
 }
-.main .top-sale-container .product-img {
-  width: 120px;
-  height: 120px;
+.main .top-sale-container .products-container {
+  display: flex;
+  width: 100%;
+}
+.main .top-sale-container .products-container .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.main .top-sale-container .products-container .col .product-img {
+  width: 190px;
+  height: 190px;
+}
+.main .top-sale-container .products-container .col .product-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 8px;
+}
+.main .top-sale-container .products-container .col .product-desc .product-name {
+  font-size: 18px;
+  direction: rtl;
+}
+.main .top-sale-container .products-container .col .product-desc .product-price {
+  font-size: 35px;
+  direction: rtl;
+}
+.main .top-sale-container .products-container .col .product-desc .product-price span:nth-child(1) {
+  font-size: 30px;
+  color: var(--primary-100);
+}
+.main .top-sale-container .products-container .col .product-desc .product-price span:nth-child(2) {
+  font-size: 20px;
+  margin-right: 2px;
 }
 .main .top-sale-container h2 {
   align-self: center;
   color: rgba(26, 26, 26, 0.7);
   font-size: 28px;
+  font-weight: normal;
+}
+.main .sections-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.main .sections-container .section {
+  width: 100%;
+  position: relative;
+}
+.main .sections-container .section img {
+  width: 100%;
+}
+.main .sections-container .section .section-name {
+  background-color: rgba(0, 0, 0, 0.3803921569);
+  padding: 10px;
+  text-align: center;
+  z-index: 9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .sections-container .section .section-name h2 {
+  color: var(--bg-100);
+  font-size: 22px;
   font-weight: normal;
 }/*# sourceMappingURL=App.css.map */

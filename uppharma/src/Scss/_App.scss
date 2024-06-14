@@ -46,14 +46,12 @@ body{
   flex-direction: column;
   position: fixed;
   top: 0;
-  gap: 1px;
   width: 100%;
   z-index: 1000;
   .first-navbar {
     background-color: var(--primary-100);
     width: 100%;
     color: white;
-    z-index: 1000;
     .navbar-container {
       display: flex;
       flex-direction: column;
@@ -193,6 +191,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 0 15px;
   margin-top: 160px;
   height: calc(100vh - 160px);
   // top sale 
@@ -200,9 +199,41 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    .product-img{
-      width: 120px;
-      height: 120px;
+    .products-container{
+      display: flex;
+      width: 100%;
+      .col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .product-img{
+          width: 190px;
+          height: 190px;
+        }
+        .product-desc{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          padding: 0 8px;
+          .product-name{
+            font-size: 18px;
+            direction: rtl;
+          }
+          .product-price{
+            font-size: 35px;
+            direction: rtl;
+            span:nth-child(1){
+              font-size: 30px;
+              color: var(--primary-100);
+            }
+            span:nth-child(2){
+              font-size: 20px;
+              margin-right: 2px;
+            }
+          }
+        }
+      }
     }
     h2{
       align-self: center;
@@ -212,5 +243,37 @@ body{
     }
   }
   //end top sale 
+  // start sections 
+  .sections-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    .section{
+      width: 100%;
+      position: relative;
+      // border-bottom:1px dashed #000000;
+      img{
+        width:100% ;
+      }
+      .section-name{
+        background-color: #00000061;
+        padding: 10px;
+        text-align: center;
+        z-index: 9;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        h2{
+          color:var(--bg-100);
+          font-size: 22px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  // end sections 
 }
 
