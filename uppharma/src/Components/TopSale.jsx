@@ -1,15 +1,15 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import Augmentin from '../Images/Augmentin.jpeg'
-import Augram from '../Images/Augram.jpeg'
-import Panadol from '../Images/Panadol.jpeg'
+import Augmentin from '../Images/Augmentin.webp'
+import Augram from '../Images/Augram.webp'
+import Panadol from '../Images/Panadol.webp'
 export default function TopSale() {
   const contentStyle = {
     height: '160px',
     color: '#fff',
     lineHeight: '160px',
     textAlign: 'center',
-    background: '#364d79',
+    background: '#e32626',
   };
   
   return (

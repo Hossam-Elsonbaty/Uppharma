@@ -6,10 +6,10 @@
 }
 
 :root {
-  --primary-100:#268be3;
-  --primary-200:#366bdd;
-  --primary-300:#004a8f;
-  --accent-100:#13478b;
+  --primary-100:#5c007c;
+  --primary-200:#a036dd;
+  --primary-300:#53008f;
+  --accent-100:#26ace6;
   --accent-200:#99c7ff;
   --text-100:#000000;
   --text-200:#2c2c2c;
@@ -80,13 +80,14 @@ body {
   border: none;
   outline: none;
   border-radius: 0 3px 3px 0;
+  opacity: 0.5;
 }
 .nav-header .first-navbar .navbar-container .search-bar button {
   padding: 5px;
   border: none;
   border: none;
-  background-color: var(--accent-100);
-  color: white;
+  color: rgba(255, 255, 255, 0.629);
+  background-color: var(--primary-300);
   border-radius: 3px 0 0 3px;
   cursor: pointer;
 }
@@ -99,6 +100,7 @@ body {
 .nav-header .first-navbar .navbar-container .nav-icons .icon {
   font-size: 1.3em;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.6274509804);
 }
 .nav-header .second-navbar {
   background-color: var(--bg-White);
@@ -191,7 +193,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 0 15px;
   margin-top: 160px;
   height: calc(100vh - 160px);
 }
@@ -248,6 +249,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 40px;
+  padding: 0 15px;
 }
 .main .sections-container .section {
   width: 100%;
@@ -268,6 +270,70 @@ body {
 }
 .main .sections-container .section .section-name h2 {
   color: var(--bg-100);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
+}
+.main .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 15px 50px 15px;
+}
+.main .footer .logo img {
+  width: 50px;
+  height: 50px;
+}
+.main .footer .links {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .footer .links a {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3294117647);
+  transition: 0.3s;
+}
+.main .footer .links a:hover {
+  color: #000000;
+}
+.main .footer .contact-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.main .footer .contact-us .col {
+  font-size: 25px;
+  color: var(--primary-100);
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1000;
+}
+.fixed-footer .col {
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+}
+.fixed-footer .col:nth-child(3) {
+  background-color: #2982bd;
+  color: #ffffff;
+}
+.fixed-footer .col:nth-child(2) {
+  background-color: #efefef;
+  color: #29bd6e;
+}
+.fixed-footer .col:nth-child(1) {
+  background-color: #e62626;
+  color: #fff;
 }/*# sourceMappingURL=App.css.map */
