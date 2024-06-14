@@ -211,8 +211,8 @@ body {
   width: 100%;
 }
 .main .top-sale-container .products-container .col .product-img {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
 }
 .main .top-sale-container .products-container .col .product-desc {
   display: flex;
