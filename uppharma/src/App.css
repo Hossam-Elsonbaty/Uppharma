@@ -292,7 +292,7 @@ body {
   align-items: center;
 }
 .main .footer .links a {
-  font-size: 14px;
+  font-size: 12px;
   color: rgba(0, 0, 0, 0.3294117647);
   transition: 0.3s;
 }
