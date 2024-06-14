@@ -6,7 +6,7 @@ export default function Swiper (){
     color: '#fff',
     lineHeight: '160px',
     textAlign: 'center',
-    background: '#5c007c',
+    background: '#004f8f',
   };
   return(
     <Carousel arrows autoplay infinite>
