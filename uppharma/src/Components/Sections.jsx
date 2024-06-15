@@ -7,6 +7,7 @@ import img5 from '../Images/eye-makeup-678x446.webp';
 import img6 from '../Images/Contact-Lenses-1.webp';
 import img7 from '../Images/first-aid-1.webp';
 import img8 from '../Images/skincare-hero.webp';
+import { Link } from 'react-router-dom';
 export default function Sections() {
   return (
     <section className='sections-container'>
@@ -19,12 +20,14 @@ export default function Sections() {
         </div>
       </div>
       <div className='section'>
-        <img src={img2} alt="" />
-        <div className='section-name'>
-          <h2>
-            العطور
-          </h2>
-        </div>
+        <Link to="/section">
+          <img src={img2} alt="" />
+          <div className='section-name'>
+            <h2>
+              العطور
+            </h2>
+          </div>
+        </Link>
       </div>
       <div className='section'>
         <img src={img3} alt="" />
@@ -38,7 +41,7 @@ export default function Sections() {
         <img src={img4} alt="" />
         <div className='section-name'>
           <h2>
-              البرد و الانفلوانزا
+            البرد و الانفلوانزا
           </h2>
         </div>
       </div>
@@ -46,7 +49,7 @@ export default function Sections() {
         <img src={img5} alt="" />
         <div className='section-name'>
           <h2>
-              المكياج
+            المكياج
           </h2>
         </div>
       </div>
@@ -54,7 +57,7 @@ export default function Sections() {
         <img src={img6} alt="" />
         <div className='section-name'>
           <h2>
-              قسم العدسات
+            قسم العدسات
           </h2>
         </div>
       </div>
@@ -62,7 +65,15 @@ export default function Sections() {
         <img src={img7} alt="" />
         <div className='section-name'>
           <h2>
-              الاسعافات الاولية
+            الاسعافات الاولية
+          </h2>
+        </div>
+      </div>
+      <div className='section'>
+        <img src={img8} alt="" />
+        <div className='section-name'>
+          <h2>
+            العناية الشخصية
           </h2>
         </div>
       </div>
