@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect, useRef } from 'react';
 import logo from '../Images/logo192.png';
 import Menu from './Menu';
 import { FaShoppingCart, FaHeart, FaUser, FaSearch } from 'react-icons/fa';
@@ -7,9 +7,31 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const navBarsRef = useRef(null);
+  const menuRef = useRef(null);
+  const handleClickOutside = (event) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      navBarsRef.current &&
+      !navBarsRef.current.contains(event.target) &&
+      isMenuOpen
+    ) {
+      setIsMenuOpen(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
   const menuItems = [
     {
       name: 'قسم العروض',
+    },
+    {
+      name: ' قسم عروض الباكيجات',
     },
     {
       name: ' قسم العطور',
@@ -51,6 +73,39 @@ export default function Navbar() {
         },
       ],
     },
+    {
+      name: 'قسم العناية بالامهات  ',
+      children: [
+        {
+          name: 'صيدلية الطفل  ',
+        },
+        {
+          name: ' قسم الجلدية للأطفال  ',
+        },
+      ],
+    },
+    {
+      name: 'قسم العناية بالبشرة  ',
+      children: [
+        {
+          name: 'صيدلية الطفل  ',
+        },
+        {
+          name: ' قسم الجلدية للأطفال  ',
+        },
+      ],
+    },
+    {
+      name: 'قسم العناية بالشعر  ',
+      children: [
+        {
+          name: 'صيدلية الطفل  ',
+        },
+        {
+          name: ' قسم الجلدية للأطفال  ',
+        },
+      ],
+    },
   ];
   return (
     <header className='nav-header'>
@@ -72,13 +127,15 @@ export default function Navbar() {
           <div className="logo">
             <img src={logo} alt="err"/>
           </div>
-          <div className="nav-bars" onClick={toggleMenu}>
+          <div className="nav-bars" ref={navBarsRef} onClick={toggleMenu}>
             <span className='bar'></span>
             <span className='bar'></span>
             <span className='bar'></span>
           </div>
         </div>
-        <Menu items={menuItems} isOpen={isMenuOpen}/>
+        <div ref={menuRef} >
+          <Menu items={menuItems} isOpen={isMenuOpen} />
+        </div>
       </nav>
     </header>
   )

@@ -40,6 +40,30 @@ export default function TopSale() {
             </div>
           </div>
         </div>
+        <div>
+          <div className='products-container'>
+            <div className='col'>
+              <img src={Augram} className='product-img' alt="" />
+              <div className='product-desc'>
+                <p className='product-name'>بانادول شراب للاطفال</p>
+                <span className='product-price'>
+                  <span>2.5</span>
+                  <span>د.ك</span>
+                </span>
+              </div>
+            </div>
+            <div className='col'>
+              <img src={Panadol} className='product-img' alt="" />
+              <div className='product-desc'>
+                <p className='product-name'>بانادول شراب للاطفال</p>
+                <span className='product-price'>
+                  <span>2.5</span>
+                  <span>د.ك</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </Carousel>
     </section>
   )
