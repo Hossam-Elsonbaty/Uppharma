@@ -464,6 +464,7 @@ body {
   padding: 4px;
   border-radius: 5px;
   width: 100px;
+  text-align: center;
 }
 .section-main .products-container .left-section .desc-order .description {
   display: flex;

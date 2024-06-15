@@ -4,10 +4,12 @@ import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import FixedFooter from './Components/FixedFooter';
 import Section from './Pages/Section';
+import ScrollToTop from './Components/ScrollToTop.jsx';
 function App() {
   return (
   <>
     <Router>
+      <ScrollToTop />
       <Navbar></Navbar>
       <Routes>
         <Route path='/' exact element={<Home />}></Route>
