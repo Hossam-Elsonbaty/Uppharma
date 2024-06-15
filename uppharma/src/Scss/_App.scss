@@ -277,47 +277,47 @@ body{
     }
   }
   // end sections 
-  // start footer
-  .footer{
+}
+// start footer
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0px 15px 50px 15px;
+  .logo{
+    img{
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .links {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     gap: 15px;
-    padding: 15px 15px 50px 15px;
-    .logo{
-      img{
-        width: 50px;
-        height: 50px;
-      }
-    }
-    .links {
-      display: flex;
-      gap: 15px;
-      justify-content: space-between;
-      align-items: center;
-      a{
-        font-size: 12px;
-        color: #00000054;
-        transition: .3s;
-        &:hover{
-          color: #000000;
-        }
-      }
-    }
-    .contact-us{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-      .col{
-        font-size: 25px;
-        color: var(--primary-100);
+    justify-content: space-between;
+    align-items: center;
+    a{
+      font-size: 12px;
+      color: #00000054;
+      transition: .3s;
+      &:hover{
+        color: #000000;
       }
     }
   }
-  // end footer
+  .contact-us{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    .col{
+      font-size: 25px;
+      color: var(--primary-100);
+    }
+  }
 }
+// end footer
 // start fixedFooter
   .fixed-footer{
     position: fixed;
@@ -355,6 +355,11 @@ body{
   margin-top: 160px;
   height: calc(100vh - 160px);
   padding: 0 10px;
+  .pagination{
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+  }
   .top{
     display: flex;
     justify-content: space-between;
@@ -377,7 +382,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding-bottom: 60px;
     .product{
       display: flex;
       gap: 15px;

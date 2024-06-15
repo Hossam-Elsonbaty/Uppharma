@@ -273,39 +273,40 @@ body {
   font-size: 20px;
   font-weight: normal;
 }
-.home-main .footer {
+
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 15px;
-  padding: 15px 15px 50px 15px;
+  padding: 0px 15px 50px 15px;
 }
-.home-main .footer .logo img {
+.footer .logo img {
   width: 50px;
   height: 50px;
 }
-.home-main .footer .links {
+.footer .links {
   display: flex;
   gap: 15px;
   justify-content: space-between;
   align-items: center;
 }
-.home-main .footer .links a {
+.footer .links a {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.3294117647);
   transition: 0.3s;
 }
-.home-main .footer .links a:hover {
+.footer .links a:hover {
   color: #000000;
 }
-.home-main .footer .contact-us {
+.footer .contact-us {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
 }
-.home-main .footer .contact-us .col {
+.footer .contact-us .col {
   font-size: 25px;
   color: var(--primary-100);
 }
@@ -346,6 +347,11 @@ body {
   height: calc(100vh - 160px);
   padding: 0 10px;
 }
+.section-main .pagination {
+  direction: ltr;
+  display: flex;
+  justify-content: center;
+}
 .section-main .top {
   display: flex;
   justify-content: space-between;
@@ -368,7 +374,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-bottom: 60px;
 }
 .section-main .products-container .product {
   display: flex;
