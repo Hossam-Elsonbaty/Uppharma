@@ -111,11 +111,11 @@ export default function Navbar() {
     <header className='nav-header'>
       <nav className="first-navbar">
         <div className="navbar-container">
-          <div className="nav-icons">
+          {/* <div className="nav-icons">
             <FaUser className="icon" />
             <FaHeart className="icon" />
             <FaShoppingCart className="icon" />
-          </div>
+          </div> */}
           <div className="search-bar">
             <input type="text" placeholder="بحث..." />
             <button><FaSearch /></button>

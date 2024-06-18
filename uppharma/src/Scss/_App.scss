@@ -320,11 +320,21 @@ body{
 // end footer
 // start fixedFooter
   .fixed-footer{
+    // position: fixed;
+    // bottom: 0;
+    // width: 100%;
+    // display: flex;
+    // z-index: 1000;
     position: fixed;
     bottom: 0;
     width: 100%;
+    padding: 4px;
     display: flex;
     z-index: 1000;
+    background-color: #f1f1f1;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 27%);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     .col{
       font-size: 28px;
       display: flex;
@@ -333,17 +343,38 @@ body{
       width: 100%;
       padding: 8px;
     }
+    .col:nth-child(5){
+      // background-color: #12486b;
+      // color: #ffffff;
+      color: #2656bf;
+    }
+    .col:nth-child(4){
+      // background-color: #000000;
+      // color: #ffffff;
+      color: #ff0000;
+    }
     .col:nth-child(3){
-      background-color: #2982bd;
-      color: #ffffff;
+      // background-color: #2982bd;
+      // color: #ffffff;
+      color: #000000;
+      .cart-items-number {
+        span{
+          padding: 0 4px;
+          background-color: #000000;
+          font-size: 18px;
+          border-radius: 4px;
+          color: #fff;
+        }
+      }
     }
     .col:nth-child(2){
-      background-color: #efefef;
+      // background-color: #efefef;
       color: #29bd6e;
     }
     .col:nth-child(1){
-      background-color: #e62626;
-      color: #fff;
+      // background-color: #e62626;
+      // color: #fff;
+      color: #8e0b0b;
     }
   }
 // end fixedFooter
@@ -351,8 +382,8 @@ body{
 .section-main{
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  margin-top: 160px;
+  gap: 10px;
+  margin-top: 130px;
   height: calc(100vh - 160px);
   padding: 0 10px;
   .pagination{
@@ -364,9 +395,9 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    h2{
-      font-weight: normal;
+    .section-title{
       font-size: 22px;
+      color: #0000009e;
     }
     .filter{
       display: flex;
