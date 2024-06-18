@@ -192,8 +192,8 @@ body {
 .home-main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  margin-top: 160px;
+  gap: 10px;
+  margin-top: 130px;
   height: calc(100vh - 160px);
 }
 .home-main .top-sale-container {
