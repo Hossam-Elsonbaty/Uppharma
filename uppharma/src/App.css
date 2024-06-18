@@ -280,7 +280,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 15px;
-  padding: 0px 15px 50px 15px;
+  padding: 0px 15px 70px 15px;
 }
 .footer .logo img {
   width: 50px;
@@ -339,6 +339,9 @@ body {
 }
 .fixed-footer .col:nth-child(3) {
   color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fixed-footer .col:nth-child(3) .cart-items-number span {
   padding: 0 4px;

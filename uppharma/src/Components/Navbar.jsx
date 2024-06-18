@@ -1,6 +1,8 @@
 import React,{useState, useEffect, useRef } from 'react';
 import logo from '../Images/logo192.png';
 import Menu from './Menu';
+import { Link } from 'react-router-dom';
+
 import { FaShoppingCart, FaHeart, FaUser, FaSearch } from 'react-icons/fa';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -125,7 +127,9 @@ export default function Navbar() {
       <nav className="second-navbar">
         <div className="navbar-container">
           <div className="logo">
-            <img src={logo} alt="err"/>
+            <Link to="/">
+              <img src={logo} alt="err"/>
+            </Link>
           </div>
           <div className="nav-bars" ref={navBarsRef} onClick={toggleMenu}>
             <span className='bar'></span>

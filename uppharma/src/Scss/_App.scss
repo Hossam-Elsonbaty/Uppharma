@@ -285,7 +285,7 @@ body{
   align-items: center;
   flex-direction: column;
   gap: 15px;
-  padding: 0px 15px 50px 15px;
+  padding: 0px 15px 70px 15px;
   .logo{
     img{
       width: 50px;
@@ -357,6 +357,9 @@ body{
       // background-color: #2982bd;
       // color: #ffffff;
       color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .cart-items-number {
         span{
           padding: 0 4px;
