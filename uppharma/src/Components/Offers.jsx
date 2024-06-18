@@ -1,29 +1,48 @@
 import React from 'react';
 import { Carousel } from 'antd';
 export default function Swiper (){
-  const contentStyle = {
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#004f8f',
+  const imgStyle = {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  };
+  const containerStyle = {
+    position: 'relative',
+    width: '100%',
+    height: '400px', // Adjust height as needed
   };
   return(
-    <Carousel arrows autoplay infinite>
-      <div>
-        <h3 style={contentStyle}>1</h3>
+    <Carousel arrows autoplay infinite autoplaySpeed={5000} fade>
+      <div style={containerStyle}>
+        <img
+          style={imgStyle}
+          src="https://a.lifecarepharmacykw.com/assets/f/slide/638496245504996557.jpg?638505013598455216"
+          alt=""
+        />
       </div>
-      <div>
-        <h3 style={contentStyle}>2</h3>
+      <div style={containerStyle}>
+        <img
+          style={imgStyle}
+          src="https://a.lifecarepharmacykw.com/assets/f/slide/638496245833904324.jpg?638505013598455216"
+          alt=""
+        />
       </div>
-      <div>
-        <h3 style={contentStyle}>3</h3>
+      <div style={containerStyle}>
+        <img
+          style={imgStyle}
+          src="https://a.lifecarepharmacykw.com/assets/f/slide/638496246039530768.jpg?638505013598455216"
+          alt=""
+        />
       </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
+      <div style={containerStyle}>
+        <img
+          style={imgStyle}
+          src="https://a.lifecarepharmacykw.com/assets/f/slide/638496245359058580.jpg?638505013598455216"
+          alt=""
+        />
       </div>
     </Carousel>
-  )
+    )
 }
 // const carousel = () => (
 // );
