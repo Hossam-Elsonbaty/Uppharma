@@ -51,6 +51,7 @@ body {
   z-index: 1000;
 }
 .nav-header .first-navbar {
+  background-color: #fff;
   width: 100%;
   color: white;
 }
