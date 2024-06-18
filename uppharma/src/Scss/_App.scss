@@ -49,7 +49,7 @@ body{
   width: 100%;
   z-index: 1000;
   .first-navbar {
-    background-color: var(--primary-100);
+    // background-color: var(--primary-100);
     width: 100%;
     color: white;
     .navbar-container {
@@ -63,9 +63,16 @@ body{
         padding: 10px 80px;
       }
       .search-bar {
+        // display: flex;
+        // flex: 1;
+        // margin: 0 20px;
+        // width: 100%;
         display: flex;
-        flex: 1;
+        flex: 1 1;
+        box-shadow: 0 0 6px 0px #0000002e;
+        padding: 10px;
         margin: 0 20px;
+        border-radius: 32px;
         width: 100%;
         input {
           flex: 1;
@@ -80,7 +87,9 @@ body{
           border: none;
           border: none;
           color: rgba(255, 255, 255, 0.629);
-          background-color: var(--primary-300);
+          color: rgba(0, 0, 0, 0.629);
+          // background-color: var(--primary-300);
+          background-color: transparent;
           border-radius: 3px 0 0 3px;
           cursor: pointer;
         }
@@ -193,7 +202,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 130px;
+  margin-top: 145px;
   height: calc(100vh - 160px);
   // top sale 
   .top-sale-container{
@@ -347,16 +356,19 @@ body{
       // background-color: #12486b;
       // color: #ffffff;
       color: #2656bf;
+      color: #525252;
     }
     .col:nth-child(4){
       // background-color: #000000;
       // color: #ffffff;
       color: #ff0000;
+      color: #525252;
     }
     .col:nth-child(3){
       // background-color: #2982bd;
       // color: #ffffff;
       color: #000000;
+      color: #525252;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -375,12 +387,14 @@ body{
     }
     .col:nth-child(2){
       // background-color: #efefef;
-      color: #29bd6e;
+      // color: #29bd6e;
+      color: #525252;
     }
     .col:nth-child(1){
       // background-color: #e62626;
       // color: #fff;
-      color: #8e0b0b;
+      // color: #8e0b0b;
+      color: #525252;
     }
   }
 // end fixedFooter
