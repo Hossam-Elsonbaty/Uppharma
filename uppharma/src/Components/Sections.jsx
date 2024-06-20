@@ -12,12 +12,14 @@ export default function Sections() {
   return (
     <section className='sections-container'>
       <div className='section'>
-        <img src={img1} alt="" />
-        <div className='section-name'>
-          <h2>
+        <Link to="/section/2">
+          <img src={img1} alt="" />
+          <div className='section-name'>
+            <h2>
             العناية الطبية
-          </h2>
-        </div>
+            </h2>
+          </div>
+        </Link>
       </div>
       <div className='section'>
         <Link to="/section">
