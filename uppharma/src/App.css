@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
 * {
   margin: 0;
   font-family: "Tajawal", sans-serif, Tahoma, Arial;
+  font-family: "El Messiri", sans-serif;
   box-sizing: border-box;
 }
 
@@ -370,7 +372,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 130px;
+  margin-top: 145px;
   height: calc(100vh - 160px);
   padding: 0 10px;
 }
@@ -518,4 +520,55 @@ body {
 .section-main .products-container .left-section .desc-order .description svg {
   color: #29bd6e;
   font-size: 30px;
+}
+
+.subSection-main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 145px;
+  height: calc(100vh - 160px);
+  padding: 0 10px;
+}
+.subSection-main .top {
+  width: 100%;
+}
+.subSection-main .top .subSection-title {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.6196078431);
+}
+.subSection-main .content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.subSection-main .content .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff7f50;
+  border-radius: 10px;
+  color: white;
+  width: 346px;
+  height: 140px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.subSection-main .content .card svg {
+  font-size: 100px;
+  margin-left: 10px;
+}
+.subSection-main .content .card .card-icon {
+  position: absolute;
+  top: 5px;
+  height: 100%;
+  left: -60px;
+}
+.subSection-main .content .card .card-text {
+  font-size: 20px;
+  font-weight: bold;
 }/*# sourceMappingURL=App.css.map */

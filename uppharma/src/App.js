@@ -4,6 +4,7 @@ import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import FixedFooter from './Components/FixedFooter';
 import Section from './Pages/Section';
+import SubSection from './Pages/SubSection';
 import ScrollToTop from './Components/ScrollToTop.jsx';
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' exact element={<Home />}></Route>
-        <Route path='section' exact element={<Section />}></Route>
+        <Route path='section/:sectionId' exact element={<SubSection />} />
+        <Route path='section' exact element={<Section />}>
+        </Route>
       </Routes>
       <FixedFooter></FixedFooter>
     </Router>

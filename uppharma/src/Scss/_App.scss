@@ -1,10 +1,12 @@
 @import '../Scss/Media';
 // @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
 * {
   margin: 0;
   // font-family: "Cairo", sans-serif;
   font-family: 'Tajawal', sans-serif, Tahoma, Arial;
+  font-family: "El Messiri", sans-serif;
   box-sizing: border-box;
 }
 :root {
@@ -404,7 +406,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 130px;
+  margin-top: 145px;
   height: calc(100vh - 160px);
   padding: 0 10px;
   .pagination{
@@ -553,4 +555,55 @@ body{
   }
 }
 // end section page 
-
+// start subSection page
+.subSection-main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 145px;
+  height: calc(100vh - 160px);
+  padding: 0 10px;
+  .top{
+    width: 100%;
+    .subSection-title{
+      font-size: 22px;
+      color: rgba(0, 0, 0, 0.6196078431);
+    }
+  }
+  .content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ff7f50;
+      border-radius: 10px;
+      color: white;
+      width: 346px; // Adjust width as needed
+      height: 140px; // Adjust height as needed
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      svg {
+        font-size: 100px;
+        margin-left: 10px;
+      }
+      .card-icon{
+        position: absolute;
+        top: 5px;
+        height: 100%;
+        left: -60px;
+      }
+      .card-text {
+        font-size: 20px; // Adjust font size as needed
+        font-weight: bold;
+      }
+  }
+  }
+}
+// end subSection page
