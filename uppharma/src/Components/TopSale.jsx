@@ -17,7 +17,7 @@ export default function TopSale() {
       <h2>المنتجات الأكثر مبيعاً</h2>
       <Carousel  autoplay >
         <div>
-          <div className='products-container'>
+          <div className='bestSeller-container'>
             <div className='col'>
               <img src={Panadol} className='product-img' alt="" />
               <div className='product-desc'>
@@ -41,7 +41,7 @@ export default function TopSale() {
           </div>
         </div>
         <div>
-          <div className='products-container'>
+          <div className='bestSeller-container'>
             <div className='col'>
               <img src={Augram} className='product-img' alt="" />
               <div className='product-desc'>

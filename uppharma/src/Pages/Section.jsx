@@ -38,9 +38,9 @@ export default function Section() {
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
   return (
     <>
-      <main className='section-main'>
-        <div className='top'>
-          <h2 className='section-title'>قسم العطور</h2>
+      <main className='main'>
+        <div className='top section-top'>
+          <h2 className='top-title'>قسم العطور</h2>
           <div className='filter'>
             <span>فلتر</span> 
             <FaArrowDown />

@@ -9,9 +9,9 @@ import Footer from '../Components/Footer';
 export default function SubSection() {
   return (
     <>
-      <main className='subSection-main'>
+      <main className='main'>
         <div className='top'>
-          <h2 className='subSection-title'>الأقسام الفرعية</h2>
+          <h2 className='top-title'>الأقسام الفرعية</h2>
         </div>
         <div className='content'>
           <SubSectionCard icon={<CiCoffeeCup />} text="الرياضة واللياقة" color="#fa5d00"></SubSectionCard>

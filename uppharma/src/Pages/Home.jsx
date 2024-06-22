@@ -5,7 +5,7 @@ import Sections from '../Components/Sections';
 import Footer from '../Components/Footer';
 export default function Home() {
   return (
-    <main className='home-main'>
+    <main className='main'>
       <Swiper></Swiper>
       <TopSale></TopSale>
       <Sections></Sections>
