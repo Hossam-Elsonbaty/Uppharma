@@ -500,6 +500,7 @@ body{
     // margin-top: 70px;
     position: absolute;
     top: 215px;
+    max-height: 680px;
     .fixed-bottom{
       position: fixed;
       bottom: 65px;
@@ -535,7 +536,7 @@ body{
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-height: 325px;
+      max-height: 550px;
       overflow: auto;
       gap: 15px;
       .item{
