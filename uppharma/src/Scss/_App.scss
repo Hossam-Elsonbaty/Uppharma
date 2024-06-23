@@ -500,8 +500,10 @@ body{
     position: absolute;
     top: 215px;
     .fixed-bottom{
-      // position: fixed;
-      // bottom: 65px;
+      position: fixed;
+      background-color: #f7f7f7;
+      bottom: 40px;
+      padding: 20px 0;
       display: flex;
       justify-content: space-around;
       width: 100%;

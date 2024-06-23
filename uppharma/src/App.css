@@ -487,6 +487,10 @@ body {
   top: 215px;
 }
 .main .cart-content .fixed-bottom {
+  position: fixed;
+  background-color: #f7f7f7;
+  bottom: 40px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-around;
   width: 100%;

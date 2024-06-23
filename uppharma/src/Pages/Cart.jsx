@@ -57,8 +57,7 @@ import { Steps } from 'antd';
 import { CiBoxList, CiWallet, CiCircleCheck, CiGrid41, CiSquareChevLeft } from "react-icons/ci";
 import { Outlet } from 'react-router-dom';
 // import './Cart.css';  // Assume you move the CSS to a separate file
-
-export default function Cart() {
+  const Cart = ()=> {
   const [items, setItems] = useState([
     { status: 'finish', icon: <CiGrid41 /> },
     { status: 'wait', icon: <CiBoxList /> },
@@ -87,3 +86,4 @@ export default function Cart() {
     </main>
   );
 }
+export default Cart;
