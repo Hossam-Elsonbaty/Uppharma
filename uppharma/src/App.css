@@ -465,6 +465,9 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
+.main .my-cart-main {
+  overflow-y: hidden;
+}
 .main .cart-top {
   position: fixed;
 }
@@ -519,6 +522,7 @@ body {
 .main .cart-content .cart-items {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   max-height: 320px;
   overflow: auto;

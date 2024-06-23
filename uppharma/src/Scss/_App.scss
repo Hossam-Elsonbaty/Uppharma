@@ -479,6 +479,9 @@ body{
   }
   // end subSection page
   // start cart 
+  .my-cart-main{
+    overflow-y: hidden;
+  }
   .cart-top{
     position: fixed;
     .top-title{
@@ -535,6 +538,7 @@ body{
     .cart-items{
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       width: 100%;
       max-height: 320px;
       overflow: auto;
