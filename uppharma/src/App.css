@@ -501,17 +501,20 @@ body {
   color: var(--accent-100);
 }
 .main .cart-content .fixed-bottom .process {
-  display: flex;
-  align-items: center;
-  gap: 15px;
   background-color: var(--accent-100);
   border: none;
   outline: none;
   padding: 8px 15px;
-  color: #fff;
   border-radius: 12px;
 }
-.main .cart-content .fixed-bottom .process svg {
+.main .cart-content .fixed-bottom .process a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #fff;
+}
+.main .cart-content .fixed-bottom .process a svg {
   font-size: 20px;
 }
 .main .cart-content .steps-container {

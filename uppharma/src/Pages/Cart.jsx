@@ -55,14 +55,22 @@
 import React, { useState } from 'react';
 import { Steps } from 'antd';
 import { CiBoxList, CiWallet, CiCircleCheck, CiGrid41, CiSquareChevLeft } from "react-icons/ci";
-import { Outlet } from 'react-router-dom';
-// import './Cart.css';  // Assume you move the CSS to a separate file
+import { Outlet, Link, useNavigate  } from 'react-router-dom';
   const Cart = ()=> {
   const [items, setItems] = useState([
     { status: 'finish', icon: <CiGrid41 /> },
     { status: 'wait', icon: <CiBoxList /> },
     { status: 'wait', icon: <CiWallet /> },
   ]);
+  const navigate = useNavigate();
+  const handleSteps = () => {
+    setItems(prevItems => 
+      prevItems.map((item, index) => 
+        index === 1 ? { ...item, status: 'process' } : item
+      )
+    );
+    navigate("order-info");
+  };
   return (
     <main className='main my-cart-main' style={{ overflowY: "hidden" }}>
       <div className='top cart-top'>
@@ -77,9 +85,11 @@ import { Outlet } from 'react-router-dom';
           <div className='total-price'>
             <span className='item-price'><span className='price'>1.5</span> د.ك</span>
           </div>
-          <button className='process'>
-            <span>متابعة الشراء</span>
-            <CiSquareChevLeft />
+          <button className='process' onClick={handleSteps}>
+            <Link to="order-info">
+              <span>متابعة الشراء</span>
+              <CiSquareChevLeft />
+            </Link>
           </button>
         </div>
       </div>

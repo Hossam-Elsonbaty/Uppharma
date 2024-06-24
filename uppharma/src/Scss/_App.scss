@@ -515,17 +515,20 @@ body{
         }
       }
       .process{
-        display: flex;
-        align-items: center;
-        gap: 15px;
         background-color: var(--accent-100);
         border: none;
         outline: none;
         padding: 8px 15px;
-        color: #fff;
         border-radius: 12px;
-        svg{
-          font-size: 20px;
+        a{
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          text-decoration:none ;
+          color: #fff;
+          svg{
+            font-size: 20px;
+          }
         }
       }
     }
