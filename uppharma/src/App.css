@@ -664,6 +664,38 @@ body {
 .main .order-info .delivery-info .col .select {
   width: 100% !important;
 }
+.main .payment-methods {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 95%;
+  overflow: auto;
+}
+.main .payment-methods .element {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.main .payment-methods .element .col {
+  font-size: 28px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #4a4a4a;
+  transition: 0.3s;
+}
+.main .payment-methods .element .col:hover {
+  background-color: var(--accent-100);
+  color: #fff;
+}
+.main .payment-methods .element .col .svg {
+  width: 80px;
+}
 
 .footer {
   display: flex;

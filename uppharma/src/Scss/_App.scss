@@ -684,6 +684,38 @@ body{
     }
   }
   // end orderInfo 
+  .payment-methods{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 95%;
+    overflow: auto;
+    .element{
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      .col{
+        font-size: 28px;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid var(--accent-100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: #4a4a4a;
+        transition: .3s;
+        &:hover{
+          background-color:var(--accent-100) ;
+          color: #fff;
+        }
+        .svg{
+          width: 80px;
+        }
+      }
+    }
+  }
   // end cart 
 }
 // start footer

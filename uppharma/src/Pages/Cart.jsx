@@ -62,21 +62,31 @@ import { Outlet, Link, useNavigate  } from 'react-router-dom';
     { status: 'wait', icon: <CiBoxList /> },
     { status: 'wait', icon: <CiWallet /> },
   ]);
+  const [current, setCurrent] = useState(0);
   const navigate = useNavigate();
+  const onChange = (value) => {
+    console.log(value);
+    setCurrent(value);
+    setItems(prevItems => 
+      prevItems.map((item, index) => 
+        index === current ? { ...item, status: 'process' } : item
+      )
+    );
+  };
   const handleSteps = () => {
     setItems(prevItems => 
       prevItems.map((item, index) => 
         index === 1 ? { ...item, status: 'process' } : item
       )
     );
-    navigate("order-info");
+    navigate("payment-methods");
   };
   return (
     <main className='main my-cart-main' style={{ overflowY: "hidden" }}>
       <div className='top cart-top'>
         <h2 className='top-title'>عربة التسوق</h2>
         <div className="steps-container">
-          <Steps items={items} direction="horizontal" responsive={false} />
+          <Steps onChange={onChange} current={current} items={items} direction="horizontal" responsive={false} />
         </div>
       </div>
       <div className="cart-content">
