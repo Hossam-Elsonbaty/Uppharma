@@ -2,11 +2,13 @@
 // @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap');
 * {
   margin: 0;
   // font-family: "Cairo", sans-serif;
-  font-family: 'Tajawal', sans-serif, Tahoma, Arial;
+  // font-family: 'Tajawal', sans-serif, Tahoma, Arial;
   // font-family: "El Messiri", sans-serif;
+  font-family: "Beiruti", sans-serif;
   box-sizing: border-box;
 }
 :root {
@@ -890,8 +892,7 @@ body{
   display: flex;
   flex-direction: column;
   height: 100vh;
-  gap: 20px;
-  padding-bottom: 18px;
+  gap: 3%;
   .svg-container{
     background-color: #e3eaf2;
     border-bottom-left-radius:60px ;
@@ -901,17 +902,17 @@ body{
     align-items: center;
     height: 50%;
     .svg{
-      width:80%;
+      width:60%;
     }
   }
   .form-section{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 4%;
     padding: 0 25px;
     height: 46%;
     h1 {
-      font-size: 24px;
+      font-size: 30px;
       color: #1e5f94;
     }
     .fields-container{

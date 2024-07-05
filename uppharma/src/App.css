@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap");
 * {
   margin: 0;
-  font-family: "Tajawal", sans-serif, Tahoma, Arial;
+  font-family: "Beiruti", sans-serif;
   box-sizing: border-box;
 }
 
@@ -843,8 +844,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  gap: 20px;
-  padding-bottom: 18px;
+  gap: 3%;
 }
 .sign-up .svg-container {
   background-color: #e3eaf2;
@@ -856,17 +856,17 @@ body {
   height: 50%;
 }
 .sign-up .svg-container .svg {
-  width: 80%;
+  width: 60%;
 }
 .sign-up .form-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 4%;
   padding: 0 25px;
   height: 46%;
 }
 .sign-up .form-section h1 {
-  font-size: 24px;
+  font-size: 30px;
   color: #1e5f94;
 }
 .sign-up .form-section .fields-container {
