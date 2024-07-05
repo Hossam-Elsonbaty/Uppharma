@@ -1,8 +1,4 @@
 import React from 'react';
-import { RiVisaLine } from "react-icons/ri";
-import { RiMastercardFill } from "react-icons/ri";
-import { FaApplePay } from "react-icons/fa6";
-import { FaGooglePay } from "react-icons/fa";
 import visa from "../Images/Visa_Inc.-Logo.wine.svg";
 import master from "../Images/Mastercard-Logo.wine.svg";
 import applePay from "../Images/Apple_Pay-Logo.wine.svg";
