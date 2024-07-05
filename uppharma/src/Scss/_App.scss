@@ -893,6 +893,7 @@ body{
   flex-direction: column;
   height: 100vh;
   gap: 3%;
+  overflow-y: hidden;
   .svg-container{
     background-color: #e3eaf2;
     border-bottom-left-radius:60px ;

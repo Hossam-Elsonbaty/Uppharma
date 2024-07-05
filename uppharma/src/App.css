@@ -845,6 +845,7 @@ body {
   flex-direction: column;
   height: 100vh;
   gap: 3%;
+  overflow-y: hidden;
 }
 .sign-up .svg-container {
   background-color: #e3eaf2;
