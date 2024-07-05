@@ -843,8 +843,7 @@ body {
 .sign-up {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  gap: 3%;
+  gap: 2em;
   overflow-y: hidden;
 }
 .sign-up .svg-container {
@@ -854,17 +853,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
+  height: 17em;
 }
 .sign-up .svg-container .svg {
-  width: 60%;
+  width: 17em;
 }
 .sign-up .form-section {
   display: flex;
   flex-direction: column;
-  gap: 4%;
+  gap: 1em;
   padding: 0 25px;
-  height: 46%;
 }
 .sign-up .form-section h1 {
   font-size: 30px;
@@ -874,7 +872,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 4%;
+  gap: 1em;
 }
 .sign-up .form-section .fields-container input {
   font-size: 16px;

@@ -891,8 +891,7 @@ body{
 .sign-up{
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  gap: 3%;
+  gap: 2em;
   overflow-y: hidden;
   .svg-container{
     background-color: #e3eaf2;
@@ -901,17 +900,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 17em;
     .svg{
-      width:60%;
+      width:17em;
     }
   }
   .form-section{
     display: flex;
     flex-direction: column;
-    gap: 4%;
+    gap: 1em;
     padding: 0 25px;
-    height: 46%;
     h1 {
       font-size: 30px;
       color: #1e5f94;
@@ -920,7 +918,7 @@ body{
       display: flex;
       flex-direction: column;
       height: 100%;
-      gap: 4%;
+      gap: 1em;
       input {
         font-size: 16px;
         outline: none;
