@@ -1,11 +1,13 @@
 import React,{useState} from 'react';
 import { FaArrowDown } from "react-icons/fa";
+import { VscSettings } from "react-icons/vsc";
 import Product from '../Components/Product';
 import Footer from '../Components/Footer';
 import { Pagination } from 'antd';
 import stronger from '../Images/stronger with you.webp';
 import sauvage from '../Images/sauvage.webp';
 import aguero from '../Images/AGUERO_1024x1024.webp';
+import ProductList from '../Components/ProductList';
 export default function Section() {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 10;
@@ -43,10 +45,10 @@ export default function Section() {
           <h2 className='top-title'>قسم العطور</h2>
           <div className='filter'>
             <span>فلتر</span> 
-            <FaArrowDown />
+            <VscSettings />
           </div>
         </div>
-        <Product products={currentProducts}></Product>
+        <ProductList products={currentProducts}></ProductList>
         <div className='pagination'>
           <Pagination 
             current={currentPage}

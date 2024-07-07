@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "ajv": "^8.16.0",
     "antd": "^5.18.1",
+    "boxicons": "^2.1.4",
     "primeicons": "^7.0.0",
     "primereact": "^10.6.6",
     "react": "^18.3.1",
