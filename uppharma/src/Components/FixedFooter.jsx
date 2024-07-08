@@ -8,8 +8,14 @@ import { Link } from 'react-router-dom';
 export default function FixedFooter() {
   return (
     <div className='fixed-footer'>
-      <div className='col'><CiPhone/></div>
-      <div className='col'><CiHeart/></div>
+      <div className='col'>
+        <CiPhone/>
+        <span className='label'>إتصال</span>
+      </div>
+      <div className='col'>
+        <CiHeart/>
+        <span className='label'>المفضلة</span>
+      </div>
       <div className='col'>
         <Link to="/my-cart">
           <div className='cart-items-number'>
@@ -17,12 +23,17 @@ export default function FixedFooter() {
           </div>
           <CiShoppingCart/>        
         </Link>
+        <span className='label'>العربة</span>
       </div>
-      <div className='col'><PiWhatsappLogoThin/></div>
+      <div className='col'>
+        <PiWhatsappLogoThin/>
+        <span className='label'>الواتس اّب</span>
+      </div>
       <div className='col'>
         <Link to="/my-profile">
           <CiUser/>        
         </Link>
+        <span className='label'>الحساب</span>
       </div>
       {/* <div className='col'><CiUser/></div> */}
     </div>
