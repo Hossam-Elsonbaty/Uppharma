@@ -10,10 +10,12 @@ export default function FixedFooter() {
     <div className='fixed-footer'>
       <div className='col'>
         <CiPhone/>
-        <span className='label'>إتصال</span>
+        <span className='label' style={{marginTop :"5px"}}>إتصال</span>
       </div>
       <div className='col'>
-        <CiHeart/>
+        <Link to="/my-cart">
+          <CiHeart/>        
+        </Link>
         <span className='label'>المفضلة</span>
       </div>
       <div className='col'>
@@ -27,7 +29,7 @@ export default function FixedFooter() {
       </div>
       <div className='col'>
         <PiWhatsappLogoThin/>
-        <span className='label'>الواتس اّب</span>
+        <span className='label' style={{marginTop :"5px"}}>الواتس اّب</span>
       </div>
       <div className='col'>
         <Link to="/my-profile">

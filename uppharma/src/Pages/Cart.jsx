@@ -53,32 +53,30 @@
 // }
 
 import React, { useState, useRef } from 'react';
-import { CiBoxList, CiWallet, CiCircleCheck, CiGrid41, CiSquareChevLeft } from "react-icons/ci";
-import { Outlet, Link, useNavigate  } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import { Button, message, Steps, theme } from 'antd';
 import CartItems from '../Components/CartItems';
 import OrderInfo from '../Components/OrderInfo';
 import PaymentMethods from '../Components/PaymentMethods';
+import { AiOutlineUnorderedList,AiOutlineFileDone, AiOutlineCreditCard} from "react-icons/ai";
 const steps = [
   {
-    title: 'سلتي',
+    title: 'العربة',
+    icon: <AiOutlineUnorderedList />,
     content: <CartItems/>,
   },
   {
-    title: 'بيانات التوصيل',
+    title: 'العنوان',
+    icon: <AiOutlineFileDone />,
     content: <OrderInfo/>,
   },
   {
     title: 'طرق الدفع',
+    icon: <AiOutlineCreditCard />,
     content: <PaymentMethods/>,
   },
 ];
 const Cart = ()=> {
-  // const [items, setItems] = useState([
-  //   { status: 'finish', icon: <CiGrid41 /> },
-  //   { status: 'wait', icon: <CiBoxList /> },
-  //   { status: 'wait', icon: <CiWallet /> },
-  // ]);
   const navigate = useNavigate();
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
@@ -91,6 +89,7 @@ const Cart = ()=> {
   const items = steps.map((item) => ({
     key: item.title,
     title: item.title,
+    icon:item.icon
   }));
   return (
     <main className='main my-cart-main' style={{ overflowY: "hidden" }}>
