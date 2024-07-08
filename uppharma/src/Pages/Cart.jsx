@@ -52,11 +52,10 @@
 //   )
 // }
 
-import React, { useState } from 'react';
-import { Steps } from 'antd';
+import React, { useState, useRef } from 'react';
 import { CiBoxList, CiWallet, CiCircleCheck, CiGrid41, CiSquareChevLeft } from "react-icons/ci";
 import { Outlet, Link, useNavigate  } from 'react-router-dom';
-  const Cart = ()=> {
+const Cart = ()=> {
   const [items, setItems] = useState([
     { status: 'finish', icon: <CiGrid41 /> },
     { status: 'wait', icon: <CiBoxList /> },
@@ -64,29 +63,33 @@ import { Outlet, Link, useNavigate  } from 'react-router-dom';
   ]);
   const [current, setCurrent] = useState(0);
   const navigate = useNavigate();
+  const next = () => {
+    setCurrent(current + 1);
+  };
   const onChange = (value) => {
     console.log(value);
     setCurrent(value);
-    setItems(prevItems => 
-      prevItems.map((item, index) => 
-        index === current ? { ...item, status: 'process' } : item
-      )
-    );
+    // setItems(prevItems => 
+    //   prevItems.map((item, index) => 
+    //     index === current ? { ...item, status: 'process' } : item
+    //   )
+    // );
   };
   const handleSteps = () => {
-    setItems(prevItems => 
-      prevItems.map((item, index) => 
-        index === 1 ? { ...item, status: 'process' } : item
-      )
-    );
-    navigate("payment-methods");
+    setCurrent(current + 1);
+    // setItems(prevItems => 
+    //   prevItems.map((item, index) => 
+    //     index === current ? { ...item, status: 'process' } : item
+    //   )
+    // );
+    // navigate("payment-methods");
   };
   return (
     <main className='main my-cart-main' style={{ overflowY: "hidden" }}>
       <div className='top cart-top'>
         <h2 className='top-title'>عربة التسوق</h2>
         <div className="steps-container">
-          <Steps onChange={onChange} current={current} items={items} direction="horizontal" responsive={false} />
+          {/* <Steps onChange={onChange} current={current} items={items} direction="horizontal" responsive={false} /> */}
         </div>
       </div>
       <div className="cart-content">
