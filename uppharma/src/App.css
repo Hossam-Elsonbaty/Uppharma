@@ -705,7 +705,7 @@ body {
 }
 .main .payment-methods .element .col {
   font-size: 20px;
-  padding: 10px;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid var(--accent-100);
   display: flex;
