@@ -436,7 +436,7 @@ body {
   justify-content: center;
   width: 30px;
   align-items: center;
-  transition: width 0.5s linear;
+  transition: width 0.29s linear;
 }
 .main .products-container .product .col .left-section .desc-order .order-btn.active {
   width: 100px;
