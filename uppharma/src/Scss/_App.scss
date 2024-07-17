@@ -360,7 +360,7 @@ body{
           padding: 5px;
           width: 40%;
           img{
-            width: 100%;
+            width: 55%;
           }
           .favorite{
             position: absolute;
@@ -388,20 +388,22 @@ body{
             color: #000000bf;
           }
           .product-price{
-            font-size: 35px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
             direction: rtl;
             span:nth-child(1){
               font-size: 25px;
               color: var(--primary-100);
             }
-            span:nth-child(2){
-              font-size: 20px;
-              margin-right: 2px;
-            }
           }
           .product-availability{
-            color: #be1414;
-            font-size: 14px;
+            color: #ffff;
+            font-size: 13px;
+            background-color: #f97316;
+            width: max-content;
+            padding: 3px 6px;
+            border-radius: 6px;
           }
           .quantity{
             display: flex;

@@ -84,10 +84,9 @@ const Product = ({ product }) => {
         <div className='left-section'>
           <h6 className='product-name'>{product.name}</h6>
           <span className='product-price'>
-            <span>{product.price}</span>
-            <span>د.ك</span>
+            <span>{product.price} <span>د.ك</span></span>
+            <span className='product-availability'>{product.availability}</span>
           </span>
-          <span className='product-availability'>{product.availability}</span>
           {/* <div className='quantity'>
             <button className='decrease'>-</button>
             <span className='number'>1</span>
