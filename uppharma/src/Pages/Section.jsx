@@ -14,10 +14,10 @@ export default function Section() {
   const products = [
     // Add your product data here
     { id: 1, name: "غوتشي ابسليوت عطر للنساء 90 مل", price: "2.5", image: aguero, availability: "متبقي 2 فقط." },
-    { id: 1, name: "باكو رابان بلاك اكس اس عطر للرجال 100 مل", price: "5", image: stronger, availability: "متبقي 2 فقط." },
-    { id: 1, name: "امبوريو ارماني سترونجر وذ يو عطر الرجال 100 مل", price: "3", image: sauvage, availability: "متبقي 2 فقط." },
-    { id: 1, name: "لاكوست بلانك L12 – 12 عطر الرجال 100 مل", price: "17.5", image: aguero, availability: "متبقي 2 فقط." },
-    { id: 1, name: "جيفنشي جنتل مان عطر للرجال 100 مل", price: "6", image: aguero, availability: "متبقي 2 فقط." },
+    { id: 2, name: "باكو رابان بلاك اكس اس عطر للرجال 100 مل", price: "5", image: stronger, availability: "متبقي 2 فقط." },
+    { id: 3, name: "امبوريو ارماني سترونجر وذ يو عطر الرجال 100 مل", price: "3", image: sauvage, availability: "متبقي 2 فقط." },
+    { id: 4, name: "لاكوست بلانك L12 – 12 عطر الرجال 100 مل", price: "17.5", image: aguero, availability: "متبقي 2 فقط." },
+    { id: 5, name: "جيفنشي جنتل مان عطر للرجال 100 مل", price: "6", image: aguero, availability: "متبقي 2 فقط." },
     { id: 1, name: "شوبارد عطر عود ملكي للجنسين 80 مل", price: "2.5", image: stronger, availability: "متبقي 2 فقط." },
     { id: 1, name: "جان بول جولتيير لابيلا عطر للنساء 100 مل", price: "8", image: aguero, availability: "متبقي 2 فقط." },
     { id: 1, name: "جان بول سكاندال جولتيير عطر للنساء 80 مل", price: "4", image: stronger, availability: "متبقي 2 فقط." },

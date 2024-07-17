@@ -351,7 +351,7 @@ body{
       .col{
         display: flex;
         gap: 15px;
-        min-height: 12em;
+        max-height: 10em;
         .img-container{
           position: relative;
           display: flex;
@@ -364,14 +364,18 @@ body{
           }
           .favorite{
             position: absolute;
-            bottom: 0%;
-            text-align: center;
-            background-color: #00000036;
-            padding:5px;
-            width: 100%;
+            top: 0;
+            right: 0;
+            display: flex;
+            background-color: rgb(255 255 255);
+            box-shadow: 0 0 3px 0px #dedede;
+            padding: 5px;
+            align-items: center;
+            border-radius: 12px;
+            justify-content: center;
             svg{
-              color: #db2626;
-              font-size: 30px;
+              color: #555555;
+              font-size: 22px;
             }
           }
         }
@@ -444,12 +448,37 @@ body{
               border: none;
               color: #fff;
               font-size: 18px;
-              padding: 4px;
               border-radius: 5px;
-              width: 100px;
               display: flex;
+              padding: 4px;
               justify-content: center;
+              width: 30px;
               align-items: center;
+              transition: width 0.5s  linear;
+              &.active{
+                width: 100px;
+              }
+              .active-div{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 10px;
+                h1{
+                  font-size: 18px;
+                }
+                button{
+                  background-color: transparent;
+                  border: none;
+                  outline: none;
+                  display: flex;
+                  align-items: center;
+                  svg{
+                    color: #fff;
+                    font-size: 19px;
+                  }
+                }
+              }
             }
             .description{
               display: flex;

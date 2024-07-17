@@ -55,12 +55,23 @@
 import React, { useState, useRef } from 'react';
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineDescription } from "react-icons/md";
+import { CiShoppingCart } from "react-icons/ci";
+import { CiCirclePlus } from "react-icons/ci";
+import { LuTrash2 } from "react-icons/lu";
 const Product = ({ product }) => {
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
   const descriptionRef = useRef(null);
+  const [isActive, setIsActive] = useState(false)
   const toggleDescription = () => {
     setIsDescriptionVisible(prev => !prev);
   };
+  const handleCart = (id) => {
+    console.log(id);
+    setIsActive(prev => !prev);
+    setTimeout(() => {
+      setIsActive(false)
+    }, 1500);
+  }
   return (
     <div className='product' key={product.id}>
       <div className='col'>
@@ -77,13 +88,23 @@ const Product = ({ product }) => {
             <span>د.ك</span>
           </span>
           <span className='product-availability'>{product.availability}</span>
-          <div className='quantity'>
+          {/* <div className='quantity'>
             <button className='decrease'>-</button>
             <span className='number'>1</span>
             <button className='increase'>+</button>
-          </div>
+          </div> */}
           <div className='desc-order'>
-            <button className='order-btn'>أطلب</button>
+            <button className={`order-btn ${isActive ? 'active' : ''}`} onClick={()=>handleCart(product.id)}>
+              {isActive == false ?
+              <CiShoppingCart />
+              :
+              <div className='active-div'>
+                <button className='plus'><CiCirclePlus /></button>
+                <h1 className='qnt'>1</h1>
+                <button className='trash'><LuTrash2 /></button>
+              </div>
+              }
+            </button>
             <button className='description' onClick={toggleDescription}>
               <MdOutlineDescription />
             </button>
