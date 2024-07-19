@@ -1,8 +1,9 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import Augmentin from '../Images/Augmentin.webp'
-import Augram from '../Images/Augram.webp'
-import Panadol from '../Images/Panadol.webp'
+import product1 from '../Images/Done1.jpg';
+import product2 from '../Images/Done2.jpg';
+import product3 from '../Images/Done3.jpg';
+import product4 from '../Images/Done4.jpg';
 export default function TopSale() {
   const contentStyle = {
     height: '160px',
@@ -19,7 +20,7 @@ export default function TopSale() {
         <div>
           <div className='bestSeller-container'>
             <div className='col'>
-              <img src={Panadol} className='product-img' alt="" />
+              <img src={product1} className='product-img' alt="" />
               <div className='product-desc'>
                 <p className='product-name'>بانادول شراب للاطفال</p>
                 <span className='product-price'>
@@ -29,7 +30,7 @@ export default function TopSale() {
               </div>
             </div>
             <div className='col'>
-              <img src={Augmentin} className='product-img' alt="" />
+              <img src={product2} className='product-img' alt="" />
               <div className='product-desc'>
                 <p className='product-name'>بانادول شراب للاطفال</p>
                 <span className='product-price'>
@@ -43,7 +44,7 @@ export default function TopSale() {
         <div>
           <div className='bestSeller-container'>
             <div className='col'>
-              <img src={Augram} className='product-img' alt="" />
+              <img src={product3} className='product-img' alt="" />
               <div className='product-desc'>
                 <p className='product-name'>بانادول شراب للاطفال</p>
                 <span className='product-price'>
@@ -53,7 +54,7 @@ export default function TopSale() {
               </div>
             </div>
             <div className='col'>
-              <img src={Panadol} className='product-img' alt="" />
+              <img src={product4} className='product-img' alt="" />
               <div className='product-desc'>
                 <p className='product-name'>بانادول شراب للاطفال</p>
                 <span className='product-price'>

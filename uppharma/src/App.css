@@ -349,7 +349,7 @@ body {
   width: 40%;
 }
 .main .products-container .product .col .img-container img {
-  width: 55%;
+  width: 100%;
 }
 .main .products-container .product .col .img-container .favorite {
   position: absolute;

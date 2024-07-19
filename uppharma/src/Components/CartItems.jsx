@@ -1,19 +1,21 @@
 import React from 'react';
 import { CiTrash } from "react-icons/ci";
-import panadol from "../Images/Panadol.webp";
-import Augmentin from "../Images/Augmentin.webp";
-import Augram from "../Images/Augram.webp";
-import Stronger from "../Images/stronger with you.webp";
-import sauvage from "../Images/sauvage.webp";
-import Aguero from "../Images/AGUERO_1024x1024.webp";
+import product1 from '../Images/Done1.jpg';
+import product2 from '../Images/Done2.jpg';
+import product3 from '../Images/Done3.jpg';
+import product4 from '../Images/Done4.jpg';
+import product5 from '../Images/Done5.jpg';
+import product6 from '../Images/Done6.jpg';
+import product7 from '../Images/Done7.jpg';
+import product8 from '../Images/Done8.jpg';
 const CartItems = () => {
   const products = [
-    { img: panadol, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
-    { img: Augmentin, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
-    { img: Augram, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
-    { img: Stronger, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
-    { img: sauvage, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
-    { img: Aguero, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
+    { img: product1, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
+    { img: product2, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
+    { img: product3, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
+    { img: product4, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
+    { img: product5, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
+    { img: product6, name: "دوكراي اناكابس اكتيف بلس للشعر والاظافر 30 كبسولة", price: "1.5 د.ك" },
   ];
   return (
     <div className='cart-items'>
