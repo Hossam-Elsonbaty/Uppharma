@@ -69,8 +69,24 @@ const Product = ({ product }) => {
     console.log(id);
     setIsActive(prev => !prev);
     setTimeout(() => {
-      setIsActive(false)
+      setIsActive(false) 
     }, 1500);
+    if (localStorage.getItem("cart")){
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      let index = cart.findIndex(item => item.productId === id)
+      if (index !== -1){
+        console.log("yes");
+        cart[index].quantity += 1;
+      } else {
+        console.log("no");
+        cart.push({productId: id, quantity:1});
+      }
+      localStorage.setItem("cart",JSON.stringify(cart));
+    } else{
+      let cart = [];
+      cart.push({productId: id, quantity:1});
+      localStorage.setItem("cart",JSON.stringify(cart));
+    }
   }
   return (
     <div className='product' key={product.id}>
@@ -125,3 +141,18 @@ const Product = ({ product }) => {
 };
 
 export default Product;
+
+// if(localStorage.getItem("cart")){
+//   let cart = JSON.parse(localStorage.getItem("cart"));
+//   let index = cart.findIndex((item) => item.id === id);
+//   if(index !== -1){
+//     cart[index].quantity += 1;
+//     } else{
+//       cart.push({id, quantity: 1});
+//     }
+//   localStorage.setItem("cart", JSON.stringify(cart));
+// } else{
+//   let cart = [];
+//   cart.push({id, quantity: 1});
+//   localStorage.setItem("cart", JSON.stringify(cart));
+// }
