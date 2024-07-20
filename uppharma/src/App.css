@@ -330,6 +330,54 @@ body {
   padding: 6px;
   opacity: 1;
 }
+.main .products-container .product .disc-popup-cont {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+.main .products-container .product .disc-popup-cont.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.main .products-container .product .disc-popup-cont .disc-popup {
+  position: relative;
+  background-color: white;
+  padding: 25px;
+  border-radius: 0px 18px 18px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 100%;
+  overflow-y: auto;
+  max-height: 450px;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+.main .products-container .product .disc-popup-cont .disc-popup .close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.main .products-container .product .disc-popup-cont .disc-popup .close svg {
+  font-size: 25px;
+  color: #464646;
+}
 .main .products-container .product .col {
   display: flex;
   flex-direction: column;

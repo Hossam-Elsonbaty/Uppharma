@@ -52,19 +52,41 @@
 //     </div>
 //   )
 // }
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineDescription } from "react-icons/md";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
 import { LuTrash2 } from "react-icons/lu";
+import { IoMdClose } from "react-icons/io";
 const Product = ({ product }) => {
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
   const descriptionRef = useRef(null);
+  const popupRef = useRef(null);
   const [isActive, setIsActive] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const toggleDescription = () => {
     setIsDescriptionVisible(prev => !prev);
   };
+  const handleClickOutside = (event) => {
+    if (
+      descriptionRef.current &&
+      !descriptionRef.current.contains(event.target) &&
+      isOpen
+    ) {
+      setIsOpen(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+  const handlePopup = (id)=> {
+    setIsOpen(prev => !prev);
+    console.log(id);
+  }
   const handleCart = (id) => {
     console.log(id);
     setIsActive(prev => !prev);
@@ -90,6 +112,14 @@ const Product = ({ product }) => {
   }
   return (
     <div className='product' key={product.id}>
+      <div className={` disc-popup-cont ${isOpen ? 'active' : ''} `}>
+        <div ref={descriptionRef} className='disc-popup'>
+          <button className='close' onClick={()=>setIsOpen(false)}><IoMdClose /></button>
+          <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates reprehenderit neque ut asperiores? Quos suscipit quis aspernatur sed. Harum blanditiis dolorem, dolore pariatur eaque eos veniam delectus quia libero voluptatem!</span>
+          <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates reprehenderit neque ut asperiores? Quos suscipit quis aspernatur sed. Harum blanditiis dolorem, dolore pariatur eaque eos veniam delectus quia libero voluptatem!</span>
+          <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates reprehenderit neque ut asperiores? Quos suscipit quis aspernatur sed. Harum blanditiis dolorem, dolore pariatur eaque eos veniam delectus quia libero voluptatem!</span>
+        </div>
+      </div>
       <div className='col'>
         <div className='img-container'>
           <div className='favorite'>
@@ -120,7 +150,7 @@ const Product = ({ product }) => {
               </div>
               }
             </button>
-            <button className='description' onClick={toggleDescription}>
+            <button className='description' ref={popupRef} onClick={()=>handlePopup(product.id)}  >
               <MdOutlineDescription />
             </button>
           </div>
