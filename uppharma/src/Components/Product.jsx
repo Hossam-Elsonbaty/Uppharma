@@ -100,7 +100,7 @@ const Product = ({ product }) => {
         <div className='left-section'>
           <h6 className='product-name'>{product.name}</h6>
           <span className='product-price'>
-            <span>{product.price} <span>د.ك</span></span>
+            <span>{product.price} <span className='currency'>د.ك</span></span>
             <span className='product-availability'>{product.availability}</span>
           </span>
           {/* <div className='quantity'>
@@ -126,7 +126,7 @@ const Product = ({ product }) => {
           </div>
         </div>
       </div>
-      <div
+      {/* <div
         className={`description-div ${isDescriptionVisible ? 'show' : ''}`}
         ref={descriptionRef}
         style={{
@@ -135,7 +135,7 @@ const Product = ({ product }) => {
         }}
       >
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus excepturi ut amet quos neque autem pariatur quidem eum, assumenda qui obcaecati, voluptatum aliquam quasi porro iure sapiente rem. Sequi?</p>
-      </div>
+      </div> */}
     </div>
   );
 };
