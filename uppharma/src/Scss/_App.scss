@@ -666,14 +666,27 @@ body{
       height: 100%;
       overflow: auto;
       padding-bottom: 10px;
+      .empty-cart{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        span{
+          font-size: 30px;
+          color: #787878;
+        }
+        svg {
+          font-size: 100px;
+          color: var(--accent-100);
+        }
+      }
       .cart-items{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         width: 100%;
         height: -webkit-fill-available;
         gap: 15px;
-        
         .item{
           display: flex;
           align-items: center;
@@ -920,6 +933,24 @@ body{
     svg{
       color:var(--primary-300) ;
       font-size: 22px;
+    }
+  }
+  .col-whats{
+    position: fixed;
+    bottom: 6em;
+    left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: #038747;
+    padding: 6px;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    svg{
+      color: #fff;
+      font-size: 30px;
     }
   }
   .col{

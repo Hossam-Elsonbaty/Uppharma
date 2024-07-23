@@ -119,7 +119,7 @@ export default function Navbar() {
             <FaShoppingCart className="icon" />
           </div> */}
           <div className="search-bar">
-            <input type="text" placeholder="بحث..." />
+            <input type="text" placeholder="الإسم- المادة الفعالة- الإستخدام..." />
             <button><FaSearch /></button>
           </div>
         </div>

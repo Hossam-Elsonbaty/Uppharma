@@ -1,85 +1,41 @@
-// import React,{ useState } from 'react'
-// import { LoadingOutlined, SmileOutlined, SolutionOutlined, UserOutlined } from '@ant-design/icons';
-// import { Steps } from 'antd';
-// import { CiBoxList } from "react-icons/ci";
-// import { CiWallet } from "react-icons/ci";
-// import { CiCircleCheck } from "react-icons/ci";
-// import { Outlet } from 'react-router-dom';
-// import { CiGrid41 } from "react-icons/ci";
-// import { CiSquareChevLeft } from "react-icons/ci";
-// export default function Cart() {
-//   const [items, setItems] = useState(
-//     [
-//       {
-//         status: 'finish',
-//         icon: <CiGrid41 />,
-//       },
-//       {
-//         // title: 'Done',
-//         status: 'wait',
-//         icon: <CiBoxList />,
-//       },
-//       {
-//         status: 'wait',
-//         icon: <CiWallet />,
-//       },
-//     ]);
-//   return (
-//     <main className='main my-cart-main' style={{overflowY:"hidden"}}>
-//       <div className='top cart-top'>
-//         <h2 className='top-title'>عربة التسوق</h2>
-//         <div className="steps-container">
-//           <Steps
-//             items={items}
-//             direction="horizontal"
-//             responsive={false}
-//           />
-//         </div>
-//       </div>
-//       <div className="cart-content">
-//         <Outlet/>
-//         <div className='fixed-bottom'>
-//           <div className='total-price'>
-//             <span className='item-price'><span className='price'>1.5</span> د.ك</span>
-//           </div>
-//           <button className='process'>
-//             <span>متابعة الشراء</span>
-//             <CiSquareChevLeft />
-//           </button>
-//         </div>
-//       </div>
-//     </main>
-//   )
-// }
-
-import React, { useState, useRef } from 'react';
-import { Link, useNavigate  } from 'react-router-dom';
-import { Button, message, Steps, theme } from 'antd';
+import React, { useState, useContext, useMemo } from 'react';
+import { Button, message, Steps } from 'antd';
+import { AiOutlineUnorderedList, AiOutlineFileDone, AiOutlineCreditCard } from "react-icons/ai";
 import CartItems from '../Components/CartItems';
 import OrderInfo from '../Components/OrderInfo';
 import PaymentMethods from '../Components/PaymentMethods';
-import { AiOutlineUnorderedList,AiOutlineFileDone, AiOutlineCreditCard} from "react-icons/ai";
-const steps = [
-  {
-    title: 'العربة',
-    icon: <AiOutlineUnorderedList />,
-    content: <CartItems/>,
-  },
-  {
-    title: 'العنوان',
-    icon: <AiOutlineFileDone />,
-    content: <OrderInfo/>,
-  },
-  {
-    title: 'طرق الدفع',
-    icon: <AiOutlineCreditCard />,
-    content: <PaymentMethods/>,
-  },
-];
-const Cart = ()=> {
-  const navigate = useNavigate();
-  const { token } = theme.useToken();
+import CartContext from '../Context/CartContext';
+import FormatCurrency from '../Components/FormatCurrency';
+import { TbShoppingCartSearch } from "react-icons/tb";
+const Cart = () => {
+  const { cart } = useContext(CartContext);
   const [current, setCurrent] = useState(0);
+  const steps = [
+    {
+      title: 'العربة',
+      icon: <AiOutlineUnorderedList />,
+      content: cart.length === 0 
+      ? <div className='empty-cart'>
+          <TbShoppingCartSearch/>
+          <span>عربة التسوق فارغة</span>
+        </div> 
+      :<CartItems />,
+    },
+    {
+      title: 'العنوان',
+      icon: <AiOutlineFileDone />,
+      content: <OrderInfo />,
+    },
+    {
+      title: 'طرق الدفع',
+      icon: <AiOutlineCreditCard />,
+      content: <PaymentMethods />,
+    },
+  ];
+  // Calculate the total price
+  const totalPrice = useMemo(() => {
+    return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  }, [cart]);
   const next = () => {
     setCurrent(current + 1);
   };
@@ -89,20 +45,18 @@ const Cart = ()=> {
   const items = steps.map((item) => ({
     key: item.title,
     title: item.title,
-    icon:item.icon
+    icon: item.icon,
   }));
   return (
     <main className='main my-cart-main' style={{ overflowY: "hidden" }}>
       <div className='top cart-top'>
         <h2 className='top-title'>عربة التسوق</h2>
         <div className="steps-container">
-          <Steps current={current} items={items} direction="horizontal" responsive={false}/>
-          {/* <Steps onChange={onChange} current={current} items={items} direction="horizontal" responsive={false} /> */}
+          <Steps current={current} items={items} direction="horizontal" responsive={false} />
         </div>
       </div>
       <div className="cart-content">
-          <div className='content'>{steps[current].content}</div>
-        {/* <Outlet /> */}
+        <div className='content'>{steps[current].content}</div>
         <div className='fixed-bottom'>
           <div className='col'>
             {current < steps.length - 1 && (
@@ -111,7 +65,7 @@ const Cart = ()=> {
                   متابعة الشراء
                 </Button>
                 <div className='total-price'>
-                  <span className='item-price'><span className='price'>1.5</span> د.ك</span>
+                  <span className='price'>{FormatCurrency(totalPrice.toFixed(2))}</span>
                 </div>
               </div>
             )}
@@ -121,7 +75,7 @@ const Cart = ()=> {
                   Done
                 </Button>
                 <div className='total-price'>
-                  <span className='item-price'><span className='price'>1.5</span> د.ك</span>
+                  <span className='item-price'><span className='price'>{totalPrice.toFixed(2)}</span> د.ك</span>
                 </div>
               </div>
             )}
@@ -136,18 +90,10 @@ const Cart = ()=> {
               </Button>
             )}
           </div>
-          {/* <div className='total-price'>
-            <span className='item-price'><span className='price'>1.5</span> د.ك</span>
-          </div>
-          <button className='process' >
-            <Link to="order-info">
-              <span>متابعة الشراء</span>
-              <CiSquareChevLeft />
-            </Link>
-          </button> */}
         </div>
       </div>
     </main>
   );
-}
+};
+
 export default Cart;

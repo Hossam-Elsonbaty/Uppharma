@@ -55,7 +55,7 @@ import PaymentMethods from './Components/PaymentMethods.jsx';
 import MyProfile from './Pages/MyProfile.jsx';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login.jsx';
-
+import { CartProvider } from './Context/CartContext.jsx';
 const App = () => {
   const location = useLocation();
   return (
@@ -67,7 +67,7 @@ const App = () => {
         <Route path='/my-profile' exact element={<MyProfile />} />
         <Route path='/sign-up' exact element={<SignUp />} />
         <Route path='/login' exact element={<Login />} />
-        <Route path='my-cart' exact element={<Cart />}>
+        <Route path='my-cart' exact element={<Cart  />}>
           <Route index element={<CartItems />} />
           <Route path='cart-items' exact element={<CartItems />} />
           <Route path='order-info' exact element={<OrderInfo />} />
@@ -83,7 +83,9 @@ const App = () => {
 const MainApp = () => (
   <Router>
     <ScrollToTop />
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
   </Router>
 );
 export default MainApp;
