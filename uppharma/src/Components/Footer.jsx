@@ -13,6 +13,7 @@ export default function Footer() {
         <a href="#">الصفحة الرئيسية</a>
         <a href="#">شروط الاستخدام</a>
         <a href="#">سياسة الخصوصية</a>
+        <a href="tel:0201118066382">إتصل بنا</a>
       </div>
       <div className='contact-us'>
         <div className='col'><FaFacebook /></div>

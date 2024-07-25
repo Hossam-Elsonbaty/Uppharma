@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { CiHome } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import CartContext from '../Context/CartContext';
 import FormatCurrency from './FormatCurrency';
 export default function FixedFooter() {
@@ -14,41 +14,29 @@ export default function FixedFooter() {
   console.log(CartItemCount);
   return (
     <div className='fixed-footer'>
-      <div className='col'>
-        <Link to="/">
-          <CiHome/>        
-        </Link>
-        <span className='label'>الرئيسية</span>
-      </div>
-      <div className='col'>
-        <CiPhone/>
-        <span className='label' style={{marginTop :"5px"}}>إتصال</span>
-      </div>
-      <div className='col'>
-        <Link to="/my-cart">
-          <div className='cart-items-number'>
-            <span>{CartItemCount}</span>
-          </div>
-          <CiShoppingCart/>        
-        </Link>
-        <span className='label'>العربة</span>
-      </div>
-      <div className='col'>
-        <Link to="/my-cart">
-          <CiHeart/>        
-        </Link>
-        <span className='label'>المفضلة</span>
-      </div>
-      <div className='col-whats'>
-        <FaWhatsapp />
-      </div>
-      <div className='col'>
-        <Link to="/my-profile">
-          <CiUser/>        
-        </Link>
+      <NavLink to="/" activeClassName="active" className='col' exact>
+        <CiHome/>        
+        <span className='label '>الرئيسية</span>
+      </NavLink>
+      <NavLink to="/my-profile" activeClassName="active" className='col'>
+        <CiUser/>        
         <span className='label'>الحساب</span>
-      </div>
-      {/* <div className='col'><CiUser/></div> */}
+      </NavLink>
+      {/* <NavLink to="tel:0201118066382" activeClassName="active" className='col'>
+        <CiPhone/>        
+        <span className='label'>إتصال</span>
+      </NavLink> */}
+      <NavLink to="/my-cart" activeClassName="active" className='col'>
+        <CiShoppingCart/>
+        <div className='cart-items-number'>
+          <span>{CartItemCount}</span>
+        </div>        
+        <span className='label'>العربة</span>
+      </NavLink>
+      <NavLink to="/my-favorite" activeClassName="active" className='col'>
+        <CiHeart/>        
+        <span className='label'>المفضلة</span>
+      </NavLink>
     </div>
   )
 }
