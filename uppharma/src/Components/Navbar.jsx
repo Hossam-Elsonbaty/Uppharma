@@ -2,7 +2,6 @@ import React,{useState, useEffect, useRef } from 'react';
 import logo from '../Images/logo.jpg';
 import Menu from './Menu';
 import { Link } from 'react-router-dom';
-
 import { FaShoppingCart, FaHeart, FaUser, FaSearch } from 'react-icons/fa';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

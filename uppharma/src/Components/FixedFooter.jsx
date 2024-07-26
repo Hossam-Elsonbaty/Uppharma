@@ -5,17 +5,18 @@ import { CiHeart } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { CiHome } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import CartContext from '../Context/CartContext';
 import FormatCurrency from './FormatCurrency';
 export default function FixedFooter() {
   const { getCartItemCount } = useContext(CartContext);
-  const CartItemCount = getCartItemCount()
+  const CartItemCount = getCartItemCount();
+  const location = useLocation();
   console.log(CartItemCount);
   return (
     <div className='fixed-footer'>
       <NavLink to="/" activeClassName="active" className='col' exact>
-        <CiHome/>        
+        <CiHome/>
         <span className='label '>الرئيسية</span>
       </NavLink>
       <NavLink to="/my-profile" activeClassName="active" className='col'>

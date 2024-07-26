@@ -61,9 +61,42 @@ const Product = ({ product }) => {
       <div className={`disc-popup-cont ${isOpen ? 'active' : ''}`}>
         <div ref={descriptionRef} className='disc-popup'>
           <button className='close' onClick={() => setIsOpen(false)}><IoMdClose /></button>
-          <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates reprehenderit neque ut asperiores? Quos suscipit quis aspernatur sed. Harum blanditiis dolorem, dolore pariatur eaque eos veniam delectus quia libero voluptatem!</span>
-          <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates reprehenderit neque ut asperiores? Quos suscipit quis aspernatur sed. Harum blanditiis dolorem, dolore pariatur eaque eos veniam delectus quia libero voluptatem!</span>
-          <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates reprehenderit neque ut asperiores? Quos suscipit quis aspernatur sed. Harum blanditiis dolorem, dolore pariatur eaque eos veniam delectus quia libero voluptatem!</span>
+          <div class="pro-short-des-wraper">
+            <p>
+              <strong>بايوبولكس فيتامين ب المركب 30 قرص</strong><br/>بايوبولكس أقراص ب كومبلكس تحتوي هذه&nbsp;الأقراص&nbsp;على فيتامينات (B) المهمة لتكوين والحفاظ على خلايا الدم الحمراء الصحية. تساعد في إنتاج الهيموغلوبين&nbsp;
+            </p>
+            <p><strong><span style={{textDecoration: "underline"}}>دواعي الاستخدام</span></strong>:
+            </p>
+            <ul>
+              <li>يحمي البشرة ويحافظ عليها&nbsp;</li>
+              <li>ينتج خلايا الدم الحمراء</li>
+              <li>يقوي الذاكرة وينشطها</li>
+              <li>يعزز جهازك المناعي</li>
+              <li>يزيد الحيوانات المنوية</li>
+              <li>يقلل الإصابة في هشاشة العظام</li>
+              <li>يقوي الاعصاب و يقلل اعتلال الاعصاب</li>
+            </ul>
+            <p><strong><span style={{textDecoration: "underline"}}>طريقة الاستخدام</span></strong>: قرص واحد يوميا بعد الوجبة&nbsp;
+            </p>
+          </div>
+          <div class="pro-short-des-wraper">
+            <p>
+              <strong>بايوبولكس فيتامين ب المركب 30 قرص</strong><br/>بايوبولكس أقراص ب كومبلكس تحتوي هذه&nbsp;الأقراص&nbsp;على فيتامينات (B) المهمة لتكوين والحفاظ على خلايا الدم الحمراء الصحية. تساعد في إنتاج الهيموغلوبين&nbsp;
+            </p>
+            <p><strong><span style={{textDecoration: "underline"}}>دواعي الاستخدام</span></strong>:
+            </p>
+            <ul>
+              <li>يحمي البشرة ويحافظ عليها&nbsp;</li>
+              <li>ينتج خلايا الدم الحمراء</li>
+              <li>يقوي الذاكرة وينشطها</li>
+              <li>يعزز جهازك المناعي</li>
+              <li>يزيد الحيوانات المنوية</li>
+              <li>يقلل الإصابة في هشاشة العظام</li>
+              <li>يقوي الاعصاب و يقلل اعتلال الاعصاب</li>
+            </ul>
+            <p><strong><span style={{textDecoration: "underline"}}>طريقة الاستخدام</span></strong>: قرص واحد يوميا بعد الوجبة&nbsp;
+            </p>
+          </div>
         </div>
       </div>
       <div className='col'>
