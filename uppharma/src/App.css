@@ -127,9 +127,11 @@ body {
     padding: 10px 80px;
   }
 }
+.nav-header .second-navbar .navbar-container .logo {
+  width: 25%;
+}
 .nav-header .second-navbar .navbar-container .logo img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
 }
 .nav-header .second-navbar .navbar-container .nav-bars {
   display: flex;
