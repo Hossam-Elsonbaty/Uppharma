@@ -1,20 +1,17 @@
-import React, {useContext} from 'react';
-import { CiShoppingCart } from "react-icons/ci";
-import { CiPhone } from "react-icons/ci";
-import { CiHeart } from "react-icons/ci";
-import { CiUser } from "react-icons/ci";
-import { CiHome } from "react-icons/ci";
-import { FaWhatsapp } from "react-icons/fa";
+import React, {useContext, useState, useEffect} from 'react';
+import { CiHeart, CiUser, CiHome, CiShoppingCart } from "react-icons/ci";
 import { NavLink, useLocation } from 'react-router-dom';
 import CartContext from '../Context/CartContext';
 import FormatCurrency from './FormatCurrency';
+import IsDesktop from '../Context/IsDesktop';
 export default function FixedFooter() {
   const { getCartItemCount } = useContext(CartContext);
+  const { isDesktop } = useContext(IsDesktop);
   const CartItemCount = getCartItemCount();
   const location = useLocation();
   console.log(CartItemCount);
   return (
-    <div className='fixed-footer'>
+    <div className={isDesktop?'desktop-footer' : 'fixed-footer'} >
       <NavLink to="/" activeClassName="active" className='col' exact>
         <CiHome/>
         <span className='label '>الرئيسية</span>

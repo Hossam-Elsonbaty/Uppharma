@@ -56,6 +56,7 @@ import MyProfile from './Pages/MyProfile.jsx';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
+import { DesktopProvider } from './Context/IsDesktop.jsx';
 const App = () => {
   const location = useLocation();
   return (
@@ -84,7 +85,9 @@ const MainApp = () => (
   <Router>
     <ScrollToTop />
     <CartProvider>
-      <App />
+      <DesktopProvider>
+        <App />
+      </DesktopProvider>
     </CartProvider>
   </Router>
 );

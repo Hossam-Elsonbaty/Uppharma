@@ -1,9 +1,13 @@
-import React,{useState, useEffect, useRef } from 'react';
+import React,{useState, useEffect, useRef, useContext } from 'react';
 import logo from '../Images/logo.jpg';
 import Menu from './Menu';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart, FaHeart, FaUser, FaSearch } from 'react-icons/fa';
+import { FiShoppingBag } from "react-icons/fi";
+import { LuHeart, LuUser } from "react-icons/lu";
+import { FaSearch } from 'react-icons/fa';
+import IsDesktop from "../Context/IsDesktop"
 export default function Navbar() {
+  const {isDesktop} = useContext(IsDesktop)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -112,15 +116,25 @@ export default function Navbar() {
     <header className='nav-header'>
       <nav className="first-navbar">
         <div className="navbar-container">
-          {/* <div className="nav-icons">
-            <FaUser className="icon" />
-            <FaHeart className="icon" />
-            <FaShoppingCart className="icon" />
-          </div> */}
-          <div className="search-bar">
-            <input type="text" placeholder="الإسم- المادة الفعالة- الإستخدام..." />
-            <button><FaSearch /></button>
-          </div>
+          {isDesktop 
+          ?
+          <div className="nav-desktop">
+            <div className="search-bar">
+              <input type="text" placeholder="الإسم- المادة الفعالة- الإستخدام..." />
+              <button><FaSearch /></button>
+            </div>
+            <div className='icons-container'>
+              <LuUser className="icon" />
+              <LuHeart className="icon" />
+              <FiShoppingBag className="icon" />
+            </div>
+          </div> 
+          :
+            <div className="search-bar">
+              <input type="text" placeholder="الإسم- المادة الفعالة- الإستخدام..." />
+              <button><FaSearch /></button>
+            </div>
+          }
         </div>
       </nav>
       <nav className="second-navbar">

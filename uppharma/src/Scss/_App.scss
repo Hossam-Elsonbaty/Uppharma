@@ -68,21 +68,37 @@ body{
       @include breakpoint(desktop){
         padding: 10px 80px;
       }
-      .search-bar {
-        // display: flex;
-        // flex: 1;
-        // margin: 0 20px;
-        // width: 100%;
+      .nav-desktop{
         display: flex;
-        flex: 1 1;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .icons-container{
+          display: flex;
+          align-items: center;
+          gap: 3em;
+          svg {
+            color: var(--accent-100);
+            justify-self: flex-end;
+            font-size: 22px;
+          }
+        }
+      }
+      .search-bar {
+        display: flex;
         box-shadow: 0 0 6px 0px #0000002e;
         padding: 10px;
         margin: 0 20px;
         border-radius: 32px;
         width: 100%;
+        @include breakpoint(desktop){
+          padding: 8px 10px;
+          width: 40%;
+          border-radius: 22px;
+        }
         input {
-          flex: 1;
           padding: 5px;
+          width: 100%;
           border: none;
           outline: none;
           border-radius: 0 3px 3px 0;
@@ -94,7 +110,6 @@ body{
           border: none;
           color: rgba(255, 255, 255, 0.629);
           color: rgba(0, 0, 0, 0.629);
-          // background-color: var(--primary-300);
           background-color: transparent;
           border-radius: 3px 0 0 3px;
           cursor: pointer;
@@ -125,10 +140,13 @@ body{
       gap: 10px;
       padding: 10px 20px;
       @include breakpoint(desktop){
-        padding: 10px 80px;
+        padding: 0px 80px;
       }
       .logo{
         width: 25%;
+        @include breakpoint(desktop){
+          max-width: 9em;
+        }    
         img{
           width: 100%;
         }
@@ -907,6 +925,9 @@ body{
 // end footer
 
 // start fixedFooter
+.desktop-footer{
+  display: none;
+}
 .fixed-footer{
   position: fixed;
   bottom: 0;

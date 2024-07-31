@@ -9,7 +9,7 @@ export default function Swiper (){
   const containerStyle = {
     position: 'relative',
     width: '100%',
-    height: '400px', // Adjust height as needed
+    height: '200px', // Adjust height as needed
   };
   return(
     <Carousel arrows autoplay infinite autoplaySpeed={5000} fade>

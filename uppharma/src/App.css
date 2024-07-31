@@ -71,18 +71,40 @@ body {
     padding: 10px 80px;
   }
 }
+.nav-header .first-navbar .navbar-container .nav-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-header .first-navbar .navbar-container .nav-desktop .icons-container {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+.nav-header .first-navbar .navbar-container .nav-desktop .icons-container svg {
+  color: var(--accent-100);
+  justify-self: flex-end;
+  font-size: 22px;
+}
 .nav-header .first-navbar .navbar-container .search-bar {
   display: flex;
-  flex: 1 1;
   box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.1803921569);
   padding: 10px;
   margin: 0 20px;
   border-radius: 32px;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .nav-header .first-navbar .navbar-container .search-bar {
+    padding: 8px 10px;
+    width: 40%;
+    border-radius: 22px;
+  }
+}
 .nav-header .first-navbar .navbar-container .search-bar input {
-  flex: 1;
   padding: 5px;
+  width: 100%;
   border: none;
   outline: none;
   border-radius: 0 3px 3px 0;
@@ -124,11 +146,16 @@ body {
 }
 @media (min-width: 768px) {
   .nav-header .second-navbar .navbar-container {
-    padding: 10px 80px;
+    padding: 0px 80px;
   }
 }
 .nav-header .second-navbar .navbar-container .logo {
   width: 25%;
+}
+@media (min-width: 768px) {
+  .nav-header .second-navbar .navbar-container .logo {
+    max-width: 9em;
+  }
 }
 .nav-header .second-navbar .navbar-container .logo img {
   width: 100%;
@@ -858,6 +885,10 @@ body {
 .footer .contact-us .col {
   font-size: 25px;
   color: var(--primary-100);
+}
+
+.desktop-footer {
+  display: none;
 }
 
 .fixed-footer {
