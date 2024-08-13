@@ -4,6 +4,7 @@ import { MdOutlineDescription } from "react-icons/md";
 import { LuTrash2 } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
 import { CiCircleMinus } from "react-icons/ci";
+import { BsInfoCircle } from "react-icons/bs";
 import CartContext from '../Context/CartContext';
 import FormatCurrency from './FormatCurrency';
 const Product = ({ product }) => {
@@ -130,7 +131,7 @@ const Product = ({ product }) => {
               }
             </button>
             <button className='description' ref={popupRef} onClick={() => handlePopup(product.id)}  >
-              <MdOutlineDescription />
+              <BsInfoCircle />
             </button>
           </div>
         </div>

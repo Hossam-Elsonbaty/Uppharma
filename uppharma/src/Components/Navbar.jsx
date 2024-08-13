@@ -6,8 +6,11 @@ import { FiShoppingBag } from "react-icons/fi";
 import { LuHeart, LuUser } from "react-icons/lu";
 import { FaSearch } from 'react-icons/fa';
 import IsDesktop from "../Context/IsDesktop"
+import CartContext from "../Context/CartContext"
 export default function Navbar() {
-  const {isDesktop} = useContext(IsDesktop)
+  const { getCartItemCount } = useContext(CartContext);
+  const { isDesktop } = useContext(IsDesktop);
+  const CartItemCount = getCartItemCount();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -124,9 +127,12 @@ export default function Navbar() {
               <button><FaSearch /></button>
             </div>
             <div className='icons-container'>
-              <LuUser className="icon" />
-              <LuHeart className="icon" />
-              <FiShoppingBag className="icon" />
+              <Link to="my-profile"><LuUser className="icon" /></Link>
+              <Link to="my-favorite"><LuHeart className="icon" /></Link>
+              <Link to="my-cart">
+                <span className='cart-items-number'>{CartItemCount}</span>
+                <FiShoppingBag className="icon" />
+              </Link>
             </div>
           </div> 
           :

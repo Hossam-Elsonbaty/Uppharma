@@ -41,7 +41,7 @@
 // }
 // export default App;
 import React from 'react';
-import {BrowserRouter as Router , Routes, Route, useLocation } from 'react-router-dom';
+import {BrowserRouter as Router , Routes, Route, useLocation, Link } from 'react-router-dom';
 import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import FixedFooter from './Components/FixedFooter';
@@ -55,12 +55,16 @@ import PaymentMethods from './Components/PaymentMethods.jsx';
 import MyProfile from './Pages/MyProfile.jsx';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login.jsx';
+import { FaWhatsapp } from "react-icons/fa";
 import { CartProvider } from './Context/CartContext.jsx';
 import { DesktopProvider } from './Context/IsDesktop.jsx';
 const App = () => {
   const location = useLocation();
   return (
     <>
+      <Link className='col-whats' to = "https://wa.me/201118066382">
+        <FaWhatsapp />
+      </Link>
       <a hidden href="https://storyset.com/user">User illustrations by Storyset</a>
       {location.pathname !== '/sign-up' && location.pathname !== '/login' && <Navbar />}
       <Routes>

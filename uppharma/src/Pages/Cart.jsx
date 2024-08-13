@@ -56,7 +56,6 @@ const Cart = () => {
         </div>
       </div>
       <div className="cart-content">
-        <div className='content'>{steps[current].content}</div>
         <div className='fixed-bottom'>
           <div className='col'>
             {current < steps.length - 1 && (
@@ -91,6 +90,7 @@ const Cart = () => {
             )}
           </div>
         </div>
+        <div className='content'>{steps[current].content}</div>
       </div>
     </main>
   );
