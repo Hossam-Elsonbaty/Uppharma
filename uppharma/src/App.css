@@ -54,7 +54,7 @@ body {
   align-items: center;
   z-index: 1000;
   background-color: #00c063;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 @media (min-width: 768px) {
   .col-whats {
@@ -63,7 +63,7 @@ body {
 }
 .col-whats svg {
   color: #fff;
-  font-size: 40px;
+  font-size: 33px;
   margin: 4px;
 }
 @media (min-width: 768px) {

@@ -55,13 +55,13 @@ body{
   align-items: center;
   z-index: 1000;
   background-color: #00c063;
-  border-radius: 20px;
+  border-radius: 25px;
   @include breakpoint(desktop){
     border-radius: 40px;
   }
   svg{
     color: #fff;
-    font-size: 40px;
+    font-size: 33px;
     margin: 4px;
     @include breakpoint(desktop){
       font-size: 50px;
