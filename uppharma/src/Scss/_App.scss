@@ -385,6 +385,12 @@ body{
   .top{
     width: 100%;
     padding: 0 10px;
+    .favorite-title-container{
+      display: flex;
+      .favoite-title-heart{
+        margin-right: 6.5px;
+      }
+    }
     .top-title{
       font-size: 22px;
       color: #0000009e;
@@ -511,6 +517,7 @@ body{
             align-items: center;
             border-radius: 12px;
             justify-content: center;
+            cursor: pointer;
             svg{
               color: #555555;
               font-size: 22px;
@@ -1211,4 +1218,7 @@ body{
 // end signUp 
 .ant-steps-item-icon {
   padding: 5px 0;
+}
+.filled-heart {
+  color: #26ace6;
 }

@@ -46,6 +46,7 @@ import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import FixedFooter from './Components/FixedFooter';
 import Section from './Pages/Section';
+import Favorite from './Pages/Favorıte';
 import SubSection from './Pages/SubSection';
 import ScrollToTop from './Components/ScrollToTop.jsx';
 import Cart from './Pages/Cart.jsx';
@@ -82,6 +83,7 @@ const App = () => {
         </Route>
         <Route path='section/:sectionId' exact element={<SubSection />} />
         <Route path='section' exact element={<Section />} />
+        <Route path='my-favorite' exact element={<Favorite />} />
       </Routes>
       {location.pathname !== '/sign-up' && location.pathname !== '/login' && <FixedFooter />}
     </>

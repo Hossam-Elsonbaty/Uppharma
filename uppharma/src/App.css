@@ -395,6 +395,12 @@ body {
   width: 100%;
   padding: 0 10px;
 }
+.main .top .favorite-title-container {
+  display: flex;
+}
+.main .top .favorite-title-container .favoite-title-heart {
+  margin-right: 6.5px;
+}
 .main .top .top-title {
   font-size: 22px;
   color: rgba(0, 0, 0, 0.6196078431);
@@ -525,6 +531,7 @@ body {
   align-items: center;
   border-radius: 12px;
   justify-content: center;
+  cursor: pointer;
 }
 .main .products-container .product .col .img-container .favorite svg {
   color: #555555;
@@ -1205,4 +1212,8 @@ body {
 
 .ant-steps-item-icon {
   padding: 5px 0;
+}
+
+.filled-heart {
+  color: #26ace6;
 }/*# sourceMappingURL=App.css.map */
