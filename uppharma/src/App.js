@@ -62,9 +62,11 @@ const App = () => {
   const location = useLocation();
   return (
     <>
-      <Link className='col-whats' to = "https://wa.me/201118066382">
-        <FaWhatsapp />
-      </Link>
+      {location.pathname !== '/sign-up' && location.pathname !== '/login' &&
+        <Link className='col-whats' to = "https://wa.me/201118066382">
+          <FaWhatsapp />
+        </Link>
+      }
       <a hidden href="https://storyset.com/user">User illustrations by Storyset</a>
       {location.pathname !== '/sign-up' && location.pathname !== '/login' && <Navbar />}
       <Routes>
