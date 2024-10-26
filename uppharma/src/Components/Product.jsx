@@ -7,6 +7,7 @@ import { CiCircleMinus } from "react-icons/ci";
 import { BsInfoCircle } from "react-icons/bs";
 import CartContext from '../Context/CartContext';
 import FormatCurrency from './FormatCurrency';
+import FavoriteIcon from './FavoriteIcon';
 const Product = ({ product }) => {
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
   const popupRef = useRef(null);
@@ -102,9 +103,7 @@ const Product = ({ product }) => {
       </div>
       <div className='col'>
         <div className='img-container'>
-          <div className='favorite'>
-            <CiHeart />
-          </div>
+          <FavoriteIcon product={product}/>
           <img src={product.image} className='product-img' alt="product" />
         </div>
         <div className='left-section'>

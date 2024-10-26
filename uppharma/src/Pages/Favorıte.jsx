@@ -4,10 +4,11 @@ import { VscSettings } from "react-icons/vsc";
 import Footer from '../Components/Footer';
 import { Pagination } from 'antd';
 import ProductList from '../Components/ProductList';
-import ProductData from '../Data/data';
-import productData from '../Data/data';
 import IsDesktop from '../Context/IsDesktop';
+import FavoritesContext from '../Context/FavoritesContext';
+
 export default function Favorıte( ) {
+  const favorites = useContext(FavoritesContext).favorites;
   const [currentPage, setCurrentPage] = useState(1);
   const {isDesktop} = useContext(IsDesktop)
   const productsPerPage = isDesktop ? 16 : 6;
@@ -17,7 +18,7 @@ export default function Favorıte( ) {
   };
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = ProductData.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = favorites.slice(indexOfFirstProduct, indexOfLastProduct);
   return (
     <>
       <main className='main'>
@@ -35,7 +36,7 @@ export default function Favorıte( ) {
         <div className='pagination'>
           <Pagination 
             current={currentPage}
-            total={productData.length}
+            total={favorites.length}
             pageSize={productsPerPage}
             onChange={onPageChange}
           />

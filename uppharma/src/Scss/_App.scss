@@ -522,6 +522,12 @@ body{
               color: #555555;
               font-size: 22px;
             }
+            svg:hover{
+              transform: scale(1.1);
+            }
+            .filled-heart {
+              color: #26ace6;
+            }
           }
         }
         .left-section{

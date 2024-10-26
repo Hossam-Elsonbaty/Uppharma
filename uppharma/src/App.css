@@ -537,6 +537,12 @@ body {
   color: #555555;
   font-size: 22px;
 }
+.main .products-container .product .col .img-container .favorite svg:hover {
+  transform: scale(1.1);
+}
+.main .products-container .product .col .img-container .favorite .filled-heart {
+  color: #26ace6;
+}
 .main .products-container .product .col .left-section {
   display: flex;
   flex-direction: column;

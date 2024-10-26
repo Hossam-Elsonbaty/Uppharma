@@ -57,8 +57,9 @@ import MyProfile from './Pages/MyProfile.jsx';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login.jsx';
 import { FaWhatsapp } from "react-icons/fa";
-import { CartProvider } from './Context/CartContext.jsx';
 import { DesktopProvider } from './Context/IsDesktop.jsx';
+import { CartProvider } from './Context/CartContext.jsx';
+import { FavoritesProvider } from './Context/FavoritesContext.jsx';
 const App = () => {
   const location = useLocation();
   return (
@@ -92,11 +93,13 @@ const App = () => {
 const MainApp = () => (
   <Router>
     <ScrollToTop />
+    <FavoritesProvider>
     <CartProvider>
       <DesktopProvider>
         <App />
       </DesktopProvider>
     </CartProvider>
+    </FavoritesProvider>
   </Router>
 );
 export default MainApp;
