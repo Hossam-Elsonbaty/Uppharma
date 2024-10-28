@@ -412,6 +412,7 @@ body {
   align-items: center;
   border-radius: 10px;
   padding: 6px 12px;
+  cursor: pointer;
 }
 .main .top .filter span {
   font-size: 19px;
@@ -674,7 +675,10 @@ body {
   gap: 16px;
   padding: 0 10px;
 }
-.main .content .card {
+.main .content .card-link {
+  text-decoration: none;
+}
+.main .content .card-link .card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -687,19 +691,20 @@ body {
   position: relative;
   overflow: hidden;
 }
-.main .content .card svg {
+.main .content .card-link .card svg {
   font-size: 100px;
   margin-left: 10px;
 }
-.main .content .card .card-icon {
+.main .content .card-link .card .card-icon {
   position: absolute;
   top: 5px;
   height: 100%;
   left: -60px;
 }
-.main .content .card .card-text {
+.main .content .card-link .card .card-text {
   font-size: 20px;
   font-weight: bold;
+  text-decoration: none;
 }
 .main .cart-top {
   position: sticky;

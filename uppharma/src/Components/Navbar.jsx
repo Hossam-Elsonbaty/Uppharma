@@ -7,6 +7,7 @@ import { LuHeart, LuUser } from "react-icons/lu";
 import { FaSearch } from 'react-icons/fa';
 import IsDesktop from "../Context/IsDesktop"
 import CartContext from "../Context/CartContext"
+import SearchBar from "./SearchBar";
 export default function Navbar() {
   const { getCartItemCount } = useContext(CartContext);
   const { isDesktop } = useContext(IsDesktop);
@@ -122,10 +123,7 @@ export default function Navbar() {
           {isDesktop 
           ?
           <div className="nav-desktop">
-            <div className="search-bar">
-              <input type="text" placeholder="الإسم- المادة الفعالة- الإستخدام..." />
-              <button><FaSearch /></button>
-            </div>
+            <SearchBar></SearchBar>
             <div className='icons-container'>
               <Link to="my-profile"><LuUser className="icon" /></Link>
               <Link to="my-favorite"><LuHeart className="icon" /></Link>
@@ -136,10 +134,7 @@ export default function Navbar() {
             </div>
           </div> 
           :
-            <div className="search-bar">
-              <input type="text" placeholder="الإسم- المادة الفعالة- الإستخدام..." />
-              <button><FaSearch /></button>
-            </div>
+            <SearchBar></SearchBar>
           }
         </div>
       </nav>

@@ -60,6 +60,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { DesktopProvider } from './Context/IsDesktop.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
 import { FavoritesProvider } from './Context/FavoritesContext.jsx';
+import SearchResults from './Pages/SearchResults.jsx';
 const App = () => {
   const location = useLocation();
   return (
@@ -85,6 +86,7 @@ const App = () => {
         <Route path='section/:sectionId' exact element={<SubSection />} />
         <Route path='section' exact element={<Section />} />
         <Route path='my-favorite' exact element={<Favorite />} />
+        <Route path='search-results' exact element={<SearchResults />} />
       </Routes>
       {location.pathname !== '/sign-up' && location.pathname !== '/login' && <FixedFooter />}
     </>
