@@ -6,6 +6,7 @@ import ProductList from '../Components/ProductList';
 import ProductData from '../Data/data';
 import productData from '../Data/data';
 import IsDesktop from '../Context/IsDesktop';
+import Filters from './../Components/Filters';
 export default function Section( ) {
   const [currentPage, setCurrentPage] = useState(1);
   const {isDesktop} = useContext(IsDesktop)
@@ -36,6 +37,7 @@ export default function Section( ) {
             onChange={onPageChange}
           />
         </div>
+        <Filters></Filters>
         <Footer></Footer>
       </main>
     </>
