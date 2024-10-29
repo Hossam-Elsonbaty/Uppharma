@@ -7,7 +7,9 @@ import ProductData from '../Data/data';
 import productData from '../Data/data';
 import IsDesktop from '../Context/IsDesktop';
 import Filters from './../Components/Filters';
+import { useFilters } from '../Context/IsFiltersOpened';
 export default function Section( ) {
+  const { openFilters } = useFilters();
   const [currentPage, setCurrentPage] = useState(1);
   const {isDesktop} = useContext(IsDesktop)
   const productsPerPage = isDesktop ? 16 : 6;
@@ -23,7 +25,7 @@ export default function Section( ) {
       <main className='main'>
         <div className='top section-top'>
           <h2 className='top-title'>قسم العطور</h2>
-          <div className='filter'>
+          <div className='filter' onClick={openFilters}>
             <span>فلتر</span> 
             <VscSettings />
           </div>

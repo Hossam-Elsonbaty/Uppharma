@@ -60,6 +60,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { DesktopProvider } from './Context/IsDesktop.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
 import { FavoritesProvider } from './Context/FavoritesContext.jsx';
+import { FiltersProvider } from './Context/IsFiltersOpened.js';
 import SearchResults from './Pages/SearchResults.jsx';
 const App = () => {
   const location = useLocation();
@@ -95,6 +96,7 @@ const App = () => {
 const MainApp = () => (
   <Router>
     <ScrollToTop />
+    <FiltersProvider>
     <FavoritesProvider>
     <CartProvider>
       <DesktopProvider>
@@ -102,6 +104,7 @@ const MainApp = () => (
       </DesktopProvider>
     </CartProvider>
     </FavoritesProvider>
+    </FiltersProvider>
   </Router>
 );
 export default MainApp;
