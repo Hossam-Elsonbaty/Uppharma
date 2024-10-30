@@ -7,7 +7,9 @@ const IsFiltersOpened = createContext();
 export function FiltersProvider({ children }) {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
-  const openFilters = () => setIsFiltersOpen(true);
+  const openFilters = () => {
+    setIsFiltersOpen(true)
+  };
   const closeFilters = () => setIsFiltersOpen(false);
 
   return (

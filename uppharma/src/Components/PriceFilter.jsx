@@ -1,20 +1,22 @@
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa'; 
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { useProducts } from '../Context/ProductsContext';
 
 export default function PriceFilter({FilterTitle}) {
-  const { productsMinPrice,productsMaxPrice } = useProducts();
+  const { productsMinPrice,productsMaxPrice,minPriceFilter, maxPriceFilter,changeMinPriceFilter,changeMaxPriceFilter} = useProducts();
   const [minPrice, setMinPrice] = useState(productsMinPrice);
   const [maxPrice, setMaxPrice] = useState(productsMaxPrice);
 
   const handleMinChange = (event) => {
     const value = Math.min(Number(event.target.value), maxPrice - 1);
     setMinPrice(value);
+    changeMinPriceFilter(value);
   };
 
   const handleMaxChange = (event) => {
     const value = Math.max(Number(event.target.value), minPrice + 1);
     setMaxPrice(value);
+    changeMaxPriceFilter(value);
   };
 
   const [showFilters, setShowFilters] = useState(true);
@@ -34,10 +36,10 @@ export default function PriceFilter({FilterTitle}) {
     </div>
     {showFilters && (
     <div className={`price-filter ${showFilters ? 'show' : ''}`}>
-      <div className="price-range"> {minPrice} EGP - {maxPrice} EGP </div>
+      <div className="price-range"> {minPriceFilter} EGP - {maxPriceFilter} EGP </div>
       <div className="price-bar">
-        <input type="range" min="0" max="10000" value={minPrice} onChange={handleMinChange} className="slider"/>
-        <input type="range" min="0" max="10000" value={maxPrice} onChange={handleMaxChange} className="slider"/>
+        <input type="range" min={productsMinPrice} max={productsMaxPrice} value={minPriceFilter} onChange={handleMinChange} className="slider"/>
+        <input type="range" min={productsMinPrice} max={productsMaxPrice} value={maxPriceFilter} onChange={handleMaxChange} className="slider"/>
       </div>
     </div>
     )}

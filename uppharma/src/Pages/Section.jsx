@@ -8,12 +8,16 @@ import Filters from './../Components/Filters';
 import { useFilters } from '../Context/IsFiltersOpened';
 import { useProducts } from '../Context/ProductsContext';
 export default function Section( ) {
-  const { productsToDisplay, getSubSectionProducts } = useProducts();
+  const { productsToDisplay, getSubSectionProducts,clearProductsFilters } = useProducts();
   const { openFilters } = useFilters();
   const [currentPage, setCurrentPage] = useState(1);
   const {isDesktop} = useContext(IsDesktop)
   useEffect(() => {
     getSubSectionProducts();
+    return () => { 
+      // clear products filters when exit 
+      clearProductsFilters();
+    }; 
   }, []);
   const productsPerPage = isDesktop ? 16 : 6;
   const onPageChange = (page) => {
@@ -26,6 +30,7 @@ export default function Section( ) {
   return (
     <>
       <main className='main'>
+      <Filters></Filters>
         <div className='top section-top'>
           <h2 className='top-title'>قسم العطور</h2>
           <div className='filter' onClick={openFilters}>

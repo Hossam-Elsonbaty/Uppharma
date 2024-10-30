@@ -15,7 +15,7 @@ export default function Filters() {
   <div className='viewport-cover' onClick={closeFilters}></div>
   <div className='filters-container'>
     <div className='filters-elevated-span'>
-      <div onClick={closeFilters} ><FiltersExitButton></FiltersExitButton> </div>
+      <FiltersExitButton></FiltersExitButton>
       <FiltersRevealButton></FiltersRevealButton>
     </div>
     <div className='filters-div'>

@@ -7,8 +7,9 @@ import IsDesktop from '../Context/IsDesktop';
 import { useLocation } from 'react-router-dom';
 import { useFilters } from '../Context/IsFiltersOpened';
 import { useProducts } from '../Context/ProductsContext';
+import Filters from './../Components/Filters';
 export default function SearchResults( ) {
-  const { productsToDisplay, getSearchProducts } = useProducts();
+  const { productsToDisplay, getSearchProducts,saveSearchParameter,clearSavedSearchParameter } = useProducts();
   const { openFilters } = useFilters();
   const [currentPage, setCurrentPage] = useState(1);
   const {isDesktop} = useContext(IsDesktop)
@@ -19,7 +20,15 @@ export default function SearchResults( ) {
     const searchParams = new URLSearchParams(location.search);
     const searchParam = searchParams.get("search-params") || "";
     getSearchProducts(searchParam);
+    saveSearchParameter(searchParam);
+
   }, [location]);
+
+  useEffect(() => {
+    return () => { 
+      clearSavedSearchParameter();
+    }; 
+  }, []);
 
   const productsPerPage = isDesktop ? 16 : 6;
   const onPageChange = (page) => {
@@ -34,6 +43,7 @@ export default function SearchResults( ) {
   return (
     <>
       <main className='main'>
+      <Filters></Filters>
         <div className='top section-top'>
           <h2 className='top-title'>نتائج البحث</h2>
           <div className='filter' onClick={openFilters}>

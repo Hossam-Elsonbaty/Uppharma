@@ -1,6 +1,7 @@
 import React ,{ useState } from 'react';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa'; 
 import { useProducts } from '../Context/ProductsContext';
+import BrandFilter from './BrandFilter';
 
 export default function NormalFilter({FilterTitle}) {
   const [showFilters, setShowFilters] = useState(true);
@@ -22,7 +23,7 @@ export default function NormalFilter({FilterTitle}) {
       {showFilters && (
         <div className={`the-filters ${showFilters ? 'show' : ''}`}>
           {productsBrands.map(brand => (
-            <div className="filter-to-choose filter-choosed">{brand}</div>
+            <BrandFilter Brand={brand} key={brand}></BrandFilter>
             ))}
         </div>
       )}
