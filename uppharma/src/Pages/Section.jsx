@@ -1,17 +1,20 @@
-import React,{useState, useContext} from 'react';
+import React,{useState, useContext,useEffect }  from 'react';
 import { VscSettings } from "react-icons/vsc";
 import Footer from '../Components/Footer';
 import { Pagination } from 'antd';
 import ProductList from '../Components/ProductList';
-import ProductData from '../Data/data';
-import productData from '../Data/data';
 import IsDesktop from '../Context/IsDesktop';
 import Filters from './../Components/Filters';
 import { useFilters } from '../Context/IsFiltersOpened';
+import { useProducts } from '../Context/ProductsContext';
 export default function Section( ) {
+  const { productsToDisplay, getSubSectionProducts } = useProducts();
   const { openFilters } = useFilters();
   const [currentPage, setCurrentPage] = useState(1);
   const {isDesktop} = useContext(IsDesktop)
+  useEffect(() => {
+    getSubSectionProducts();
+  }, []);
   const productsPerPage = isDesktop ? 16 : 6;
   const onPageChange = (page) => {
     setCurrentPage(page);
@@ -19,7 +22,7 @@ export default function Section( ) {
   };
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = ProductData.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = productsToDisplay.slice(indexOfFirstProduct, indexOfLastProduct);
   return (
     <>
       <main className='main'>
@@ -34,7 +37,7 @@ export default function Section( ) {
         <div className='pagination'>
           <Pagination 
             current={currentPage}
-            total={productData.length}
+            total={productsToDisplay.length}
             pageSize={productsPerPage}
             onChange={onPageChange}
           />

@@ -1,9 +1,11 @@
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa'; 
 import React, { useState } from 'react'
+import { useProducts } from '../Context/ProductsContext';
 
 export default function PriceFilter({FilterTitle}) {
-  const [minPrice, setMinPrice] = useState(100);
-  const [maxPrice, setMaxPrice] = useState(900);
+  const { productsMinPrice,productsMaxPrice } = useProducts();
+  const [minPrice, setMinPrice] = useState(productsMinPrice);
+  const [maxPrice, setMaxPrice] = useState(productsMaxPrice);
 
   const handleMinChange = (event) => {
     const value = Math.min(Number(event.target.value), maxPrice - 1);

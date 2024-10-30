@@ -1,15 +1,26 @@
-import React,{useState, useContext} from 'react';
+import React,{useState, useContext,useEffect }  from 'react';
 import { VscSettings } from "react-icons/vsc";
 import Footer from '../Components/Footer';
 import { Pagination } from 'antd';
 import ProductList from '../Components/ProductList';
-import ProductData from '../Data/data';
-import productData from '../Data/data';
 import IsDesktop from '../Context/IsDesktop';
 import { useLocation } from 'react-router-dom';
+import { useFilters } from '../Context/IsFiltersOpened';
+import { useProducts } from '../Context/ProductsContext';
 export default function SearchResults( ) {
+  const { productsToDisplay, getSearchProducts } = useProducts();
+  const { openFilters } = useFilters();
   const [currentPage, setCurrentPage] = useState(1);
   const {isDesktop} = useContext(IsDesktop)
+
+  // Get the search parameter from the URL
+  const location = useLocation();
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const searchParam = searchParams.get("search-params") || "";
+    getSearchProducts(searchParam);
+  }, [location]);
+
   const productsPerPage = isDesktop ? 16 : 6;
   const onPageChange = (page) => {
     setCurrentPage(page);
@@ -18,23 +29,14 @@ export default function SearchResults( ) {
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
-  // Get the search parameter from the URL
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const searchParam = searchParams.get("search-params") || "";
-
-  // Filter products based on search term , replace this step with requesting backend with searchParam for filtered data directly
-  const searchedProducts = productData.filter((product) =>
-    product.name.toLowerCase().includes(searchParam.toLowerCase()) 
-  );
   // pagination
-  const currentProducts = searchedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = productsToDisplay.slice(indexOfFirstProduct, indexOfLastProduct);
   return (
     <>
       <main className='main'>
         <div className='top section-top'>
           <h2 className='top-title'>نتائج البحث</h2>
-          <div className='filter'>
+          <div className='filter' onClick={openFilters}>
             <span>فلتر</span> 
             <VscSettings />
           </div>
@@ -43,7 +45,7 @@ export default function SearchResults( ) {
         <div className='pagination'>
           <Pagination 
             current={currentPage}
-            total={productData.length}
+            total={productsToDisplay.length}
             pageSize={productsPerPage}
             onChange={onPageChange}
           />

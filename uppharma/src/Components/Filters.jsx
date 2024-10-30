@@ -1,4 +1,4 @@
-import React , { useState,useEffect } from 'react';
+import React from 'react';
 import FiltersExitButton from './FiltersExitButton';
 import FiltersRevealButton from './FiltersRevealButton';
 import NormalFilter from './NormalFilter';
@@ -19,7 +19,7 @@ export default function Filters() {
       <FiltersRevealButton></FiltersRevealButton>
     </div>
     <div className='filters-div'>
-      <NormalFilter FilterTitle="العلامة التجارية"></NormalFilter>
+      <NormalFilter FilterTitle="العلامة التجارية" ></NormalFilter>
       <PriceFilter FilterTitle="السعر"></PriceFilter>
       <NormalFilter FilterTitle="البائع"></NormalFilter>           
     </div>

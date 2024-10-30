@@ -10,58 +10,66 @@ const productData = [
   { 
     id: 1,
     name: "غوتشي ابسليوت عطر للنساء 90 مل",
-    price: 2.5,
+    price: 100,
     image: product1,
-    availability: "متبقي 2 فقط."
+    availability: "متبقي 2 فقط.",
+    brand:"غوتشي"
   },
   { 
     id: 2, 
     name: "باكو رابان بلاك اكس اس عطر للرجال 100 مل", 
-    price: 5, 
+    price: 4000, 
     image: product2, 
-    availability: "متبقي 2 فقط." 
+    availability: "متبقي 2 فقط.",
+    brand: "باكو"
   },
   { 
     id: 3, 
     name: "امبوريو ارماني سترونجر وذ يو عطر الرجال 100 مل", 
-    price: 3, 
+    price: 800, 
     image: product3, 
-    availability: "متبقي 2 فقط." 
+    availability: "متبقي 2 فقط." ,
+    brand:"امبوريو"
   },
   { 
     id: 4, 
     name: "لاكوست بلانك L12 – 12 عطر الرجال 100 مل", 
-    price: 17.5, 
+    price:300, 
     image: product4, 
-    availability: "متبقي 2 فقط." 
+    availability: "متبقي 2 فقط." ,
+    brand:"لاكوست بلانك"
   },
   { 
     id: 5, 
     name: "جيفنشي جنتل مان عطر للرجال 100 مل", 
-    price: 6, 
+    price: 10000, 
     image: product5, 
-    availability: "متبقي 2 فقط." 
+    availability: "متبقي 2 فقط." ,
+    brand:"جيفنشي"
   },
   { 
     id: 6, 
     name: "شوبارد عطر عود ملكي للجنسين 80 مل", 
-    price: 2.5, 
+    price: 2500, 
     image: product6, 
-    availability: "متبقي 2 فقط." 
+    availability: "متبقي 2 فقط." ,
+    brand:"شوبارد"
   },
   { 
     id: 7, 
     name: "جان بول جولتيير لابيلا عطر للنساء 100 مل", 
     price: 8, 
     image: product7, 
-    availability: "متبقي 2 فقط." 
+    availability: "متبقي 2 فقط." ,
+    brand:"جان بول"
   },
   { 
     id: 8, 
     name: "جان بول سكاندال جولتيير عطر للنساء 80 مل", 
-    price: 4, 
+    price: 5000, 
     image: product8, 
-    availability: "متبقي 2 فقط." 
+    availability: "متبقي 2 فقط." ,
+    brand:"جان بول"
   },
   // Add more products as needed
 ];
