@@ -40,9 +40,9 @@ export function ProductsProvider({ children }) {
     const searchedProducts = ProductData.filter((product) =>
       product.name.toLowerCase().includes(searchParam.toLowerCase()) 
     );
-    const maxPrice = Math.max(...ProductData.map(product => product.price));
-    const minPrice = Math.min(...ProductData.map(product => product.price));
-    const brands = [...new Set(ProductData.map(product => product.brand))];
+    const maxPrice = Math.max(...searchedProducts.map(product => product.price));
+    const minPrice = Math.min(...searchedProducts.map(product => product.price));
+    const brands = [...new Set(searchedProducts.map(product => product.brand))];
     setProductsMaxPrice(maxPrice);
     setProductsMinPrice(minPrice);
     setProductsBrands(brands);
@@ -98,7 +98,7 @@ export function ProductsProvider({ children }) {
   }
 
   return (
-    <ProductsContext.Provider value={{ productsToDisplay,productsMinPrice,productsMaxPrice,productsBrands,brandsFilter,minPriceFilter,maxPriceFilter,getSubSectionProducts ,getSearchProducts,getSubSectionProductsWhenFilter,clearProductsFilters,changeMinPriceFilter,changeMaxPriceFilter,changeBrandsFilter,saveSearchParameter,clearSavedSearchParameter }}>
+    <ProductsContext.Provider value={{ productsToDisplay,productsMinPrice,productsMaxPrice,productsBrands,brandsFilter,minPriceFilter,maxPriceFilter,savedSearchParameter,getSubSectionProducts ,getSearchProducts,getSubSectionProductsWhenFilter,clearProductsFilters,changeMinPriceFilter,changeMaxPriceFilter,changeBrandsFilter,saveSearchParameter,clearSavedSearchParameter }}>
       {children}
     </ProductsContext.Provider>
   );
