@@ -63,7 +63,7 @@ const Product = ({ product }) => {
       <div className={`disc-popup-cont ${isOpen ? 'active' : ''}`}>
         <div ref={descriptionRef} className='disc-popup'>
           <button className='close' onClick={() => setIsOpen(false)}><IoMdClose /></button>
-          <div class="pro-short-des-wraper">
+          <div className="pro-short-des-wraper">
             <p>
               <strong>بايوبولكس فيتامين ب المركب 30 قرص</strong><br/>بايوبولكس أقراص ب كومبلكس تحتوي هذه&nbsp;الأقراص&nbsp;على فيتامينات (B) المهمة لتكوين والحفاظ على خلايا الدم الحمراء الصحية. تساعد في إنتاج الهيموغلوبين&nbsp;
             </p>
