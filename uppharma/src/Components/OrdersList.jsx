@@ -6,8 +6,13 @@ import OrderDetails from './OrderDetails';
 const OrdersList = ({ orders }) => {
   const [showOrderDetails, setShowOrderDetails] = useState(false);
   const [orderDetailsToBeDisplayed, setOrderDetailsToBeDisplayed] = useState({});
+  const [clickedOrder, setClickedOrder] = useState(null);
 
-
+  const handleOrderClick=(order)=>{
+    setShowOrderDetails(true);
+    setOrderDetailsToBeDisplayed(order);
+    setClickedOrder(order.orderNo);
+  }
   return (
   <>
     {showOrderDetails
@@ -16,7 +21,7 @@ const OrdersList = ({ orders }) => {
         :
         <div className="orders-container">
           {orders.map(order => (
-            <div onClick={()=>{setShowOrderDetails(true);setOrderDetailsToBeDisplayed(order)}}><Order order={order}></Order></div>
+            <div key={order.id} onClick={()=>{handleOrderClick(order)}}><Order order={order} clickedOrder={clickedOrder}></Order></div>
           ))}
         </div>
     }

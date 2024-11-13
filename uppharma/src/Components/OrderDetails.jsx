@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { FaArrowRight,FaTruck } from 'react-icons/fa'; 
+import { FaArrowRight,FaTruck,FaClipboardCheck } from 'react-icons/fa'; 
 
 const OrderDetails = ({ setShowOrderDetails,order }) => {
   const [animate, setAnimate] = useState(false);
@@ -23,7 +23,7 @@ const OrderDetails = ({ setShowOrderDetails,order }) => {
         </div>
         <div className="state-container">
           <h2 className="state-declare-text">  {order.stateDeclareText}</h2>
-          <FaTruck></FaTruck>
+            {order.state=="تم التسليم"?<FaClipboardCheck></FaClipboardCheck>:<FaTruck></FaTruck>}
         </div>
         <div className="order-placed-container">
           <span className='declare-text'>تم تأكيد الطلب في</span>
@@ -35,7 +35,7 @@ const OrderDetails = ({ setShowOrderDetails,order }) => {
       </div>
       <div className="order-details-lower-section">
         {order.products.map((product) => (
-          <div className="product">
+          <div className="product" key={product.id}>
             <div className="img-name-infos">
               <img className="prd-img" src={product.image} alt="" />
               <div className="prd-name-infos">

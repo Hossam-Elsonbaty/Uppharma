@@ -1433,8 +1433,7 @@ body{
 .orders-container{
   padding: 15px 15px;
   .order-master-container{
-    border-radius: 13px; /* Optional: for rounded corners */
-    box-shadow: 0 4px 8px rgba(38, 172, 230, 0.3); /* Optional: for a subtle shadow */
+    border-radius: 13px;
     height: 95px;
     padding: 10px;
     direction: rtl;
@@ -1458,7 +1457,13 @@ body{
         }
       }
       .order-master-state-span{
-
+        display: flex;
+        .recieved-state{
+          color: green;
+        }
+        .delivery-state{
+          color: blue;
+        }
       }
     }
     .order-master-images-span{
@@ -1479,6 +1484,12 @@ body{
         margin-left: 0; /* Ensure the first image is fully visible */
       }
     }
+  }
+  .last-clicked-order{  
+    box-shadow: 0 4px 8px rgba(38, 172, 230, 0.5); /* Optional: for a subtle shadow */
+  }
+  .not-clicked-order{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* Optional: for a subtle shadow */
   }
 }
 // order details page 

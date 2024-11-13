@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import FixedFooter from '../Components/FixedFooter';
 import Footer from '../Components/Footer';
 import { HiOutlinePencil } from "react-icons/hi2";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { GoSignOut } from "react-icons/go";
+import { useNavigate } from 'react-router-dom';
 const MyProfile = () => {
+  const navigate = useNavigate();
   return (
     <>
       <main className='my-profile'>
@@ -19,7 +19,7 @@ const MyProfile = () => {
           </div>
           <div className="element">
             <h3>الحساب</h3>
-            <div className="col">
+            <div className="col" onClick={()=>{navigate("/orders")}}>
               <h4>طلباتي</h4>
               <MdOutlineKeyboardArrowLeft />
             </div>

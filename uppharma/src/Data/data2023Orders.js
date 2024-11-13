@@ -90,7 +90,7 @@ const Orders2023 = [
   },
   {
     id:"6",
-    orderNo:"32X7Q1",
+    orderNo:"32XOQ1",
     orderPlaced:"12-7-2023 11:30 AM",
     orderYear:"2023",
     state:"تم التسليم",
@@ -130,7 +130,7 @@ const Orders2023 = [
   },
   {
     id:"20",
-    orderNo:"32X3Q8",
+    orderNo:"32Z3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -161,7 +161,7 @@ const Orders2023 = [
   },
   {
     id:"21",
-    orderNo:"32X3Q8",
+    orderNo:"32S3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -193,7 +193,7 @@ const Orders2023 = [
   },
   {
     id:"114",
-    orderNo:"32X3Q8",
+    orderNo:"11X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -225,7 +225,7 @@ const Orders2023 = [
   },
   {
     id:"444",
-    orderNo:"32X3Q8",
+    orderNo:"92X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -257,7 +257,7 @@ const Orders2023 = [
   },
   {
     id:"4321",
-    orderNo:"32X3Q8",
+    orderNo:"82X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -289,7 +289,7 @@ const Orders2023 = [
   },
   {
     id:"42234",
-    orderNo:"32X3Q8",
+    orderNo:"72X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -320,7 +320,7 @@ const Orders2023 = [
   },
   {
     id:"400",
-    orderNo:"32X3Q8",
+    orderNo:"62X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -351,7 +351,7 @@ const Orders2023 = [
   },
   {
     id:"999",
-    orderNo:"32X3Q8",
+    orderNo:"52X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -382,7 +382,7 @@ const Orders2023 = [
   },
   {
     id:"766",
-    orderNo:"32X3Q8",
+    orderNo:"42X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -413,7 +413,7 @@ const Orders2023 = [
   },
   {
     id:"4543",
-    orderNo:"32X3Q8",
+    orderNo:"22X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",
@@ -443,8 +443,8 @@ const Orders2023 = [
     ]
   },
   {
-    id:"434456",
-    orderNo:"32X3Q8",
+    id:"435555",
+    orderNo:"12X3Q8",
     orderPlaced:"23-9-2023 10:50 AM",
     orderYear:"2023",
     state:"تم الارسال",

@@ -9,7 +9,7 @@ import product8 from '../Images/Done8.jpg';
 const Orders2022 = [
   {
     id:"10",
-    orderNo:"32X3Q8",
+    orderNo:"MMX3Q8",
     orderPlaced:"23-9-2022 10:50 AM",
     orderYear:"2022",
     state:"تم الارسال",
@@ -41,7 +41,7 @@ const Orders2022 = [
   },
   {
     id:"11",
-    orderNo:"32X2Q9",
+    orderNo:"OKX2Q9",
     orderPlaced:"22-3-2022 11:50 AM",
     orderYear:"2022",
     state:"تم التسليم",
@@ -91,7 +91,7 @@ const Orders2022 = [
   },
   {
     id:"12",
-    orderNo:"32X7Q1",
+    orderNo:"3254L1",
     orderPlaced:"12-7-2022 11:30 AM",
     orderYear:"2022",
     state:"تم التسليم",

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 
-export default function OrdersSearchBar({selectedYear}) {
+export default function OrdersSearchBar({selectedYear,searchOrdersTerm,setSearchOrdersTerm}) {
 
   const handleInputChange = (event) => {
-
+    setSearchOrdersTerm(event.target.value);
   };
 
   return (
@@ -12,7 +12,7 @@ export default function OrdersSearchBar({selectedYear}) {
       <input
         type="text"
         placeholder={`ابحث في طلبات ${selectedYear}`}
-        value=""
+        value={searchOrdersTerm}
         onChange={handleInputChange}
       />
       <button><FaSearch /></button>

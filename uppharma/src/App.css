@@ -1430,8 +1430,7 @@ body {
   padding: 15px 15px;
 }
 .orders-container .order-master-container {
-  border-radius: 13px; /* Optional: for rounded corners */
-  box-shadow: 0 4px 8px rgba(38, 172, 230, 0.3); /* Optional: for a subtle shadow */
+  border-radius: 13px;
   height: 95px;
   padding: 10px;
   direction: rtl;
@@ -1456,6 +1455,15 @@ body {
 .orders-container .order-master-container .order-master-left-span .order-master-left-up-span .order-master-datetime-span {
   direction: ltr;
 }
+.orders-container .order-master-container .order-master-left-span .order-master-state-span {
+  display: flex;
+}
+.orders-container .order-master-container .order-master-left-span .order-master-state-span .recieved-state {
+  color: green;
+}
+.orders-container .order-master-container .order-master-left-span .order-master-state-span .delivery-state {
+  color: blue;
+}
 .orders-container .order-master-container .order-master-images-span {
   direction: ltr;
   display: flex;
@@ -1473,6 +1481,12 @@ body {
 }
 .orders-container .order-master-container .order-master-images-span img:first-child {
   margin-left: 0; /* Ensure the first image is fully visible */
+}
+.orders-container .last-clicked-order {
+  box-shadow: 0 4px 8px rgba(38, 172, 230, 0.5); /* Optional: for a subtle shadow */
+}
+.orders-container .not-clicked-order {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
 }
 
 .order-details-container {
