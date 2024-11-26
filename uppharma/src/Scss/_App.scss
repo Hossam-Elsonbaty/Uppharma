@@ -336,40 +336,187 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
-    padding: 0 15px;
+    gap: 30px;
     @include breakpoint(desktop){
       flex-direction: row;
       justify-content: space-between;
       padding: 0 9em;
       flex-wrap: wrap;
     }
-    .section{
+    .health-state-section-container{
+      display: flex;
       width: 100%;
-      position: relative;
-      @include breakpoint(desktop){
-        width: 45%;
-      }
-      // border-bottom:1px dashed #000000;
-      img{
-        width:100% ;
-      }
-      .section-name{
-        background-color: #00000061;
-        padding: 10px;
-        text-align: center;
-        z-index: 6;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        h2{
-          color:var(--bg-100);
-          font-size: 20px;
-          font-weight: normal;
+      .title-and-cards-section{
+        overflow-x: hidden;
+        width: 80%;
+        h3{
+          padding-right: 5px;
+          color: #000000;
+          text-decoration: underline;
+          padding-top:15px ;
+        }
+        .cards-section{
+          display: flex;
+          padding-right: 10px;
+          padding-left: 10px;
+          padding-top:15px ;
+          padding-bottom:30px ;
+          .card{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            margin-right: 10px; 
+            border-radius: 0px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            .health-state-img-container{
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              img{
+                border-radius: 50%;
+                height: 55px;
+                width: 55px;
+              }
+            }
+            h5{
+              text-align: center;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            }
+          }
         }
       }
-    }
+      .more-section{
+        width: 20%;
+        display: flex;
+        padding-right:10px ;
+        padding-left:10px ;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 123, 255) ;
+        box-shadow: 4px 0 8px rgba(0, 123, 255, 0.5); /* Horizontal shadow only */
+      }
+    } 
+    .age-classify-section-container{
+      width: 100%;
+      h3{
+        padding-right: 5px;
+        color: #000000;
+        text-decoration: underline;
+        padding-top:15px ;
+      }
+      .cards-section{
+        width: 100%;
+        display: flex;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top:15px ;
+        padding-bottom:30px ;
+        overflow-x: scroll;
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: #007bff #f0f0f0; /* Thumb color and track color */
+        .age-card{
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-right: 10px; 
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          h5{
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+      .cards-section::-webkit-scrollbar {
+        height: 8px; /* Adjust scrollbar height */
+      }
+      
+      .cards-section::-webkit-scrollbar-thumb {
+        background-color: #007bff; /* Thumb color */
+        border-radius: 4px; /* Rounded edges */
+      }
+      
+      .cards-section::-webkit-scrollbar-track {
+        background-color: #f0f0f0; /* Track color */
+      }
+    } 
+    .from-a-to-z-container{
+      width: 100%;
+      h3{
+        padding-right: 5px;
+        color: #000000;
+        text-decoration: underline;
+        padding-top:15px ;
+      }
+      .cards-section{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top:15px ;
+        padding-bottom:30px ;
+        .card{
+          width: 20%;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          h4{
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    } 
+    .categories-section-container{
+      width: 100%;
+      .title-and-cards-section{
+        width: 100%;
+        h3{
+          padding-right: 5px;
+          color: #000000;
+          text-decoration: underline;
+          padding-top:15px ;
+        }
+        .cards-section{
+          width: 100%;
+          display: flex;
+          gap: 2%;
+          flex-wrap: wrap;
+          padding-right: 10px;
+          padding-left: 10px;
+          padding-top:15px ;
+          padding-bottom:30px ;
+          .card{
+            width: 20%;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            margin-bottom: 15px;
+            margin-right: 10px; 
+            border-radius: 0px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            .health-state-img-container{
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              img{
+                border-radius: 50%;
+                height: 55px;
+                width: 55px;
+              }
+            }
+            h5{
+              text-align: center;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            }
+          }
+        }
+      }
+    } 
+
   }
   // end sections 
   // start section page 

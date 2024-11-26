@@ -344,8 +344,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
-  padding: 0 15px;
+  gap: 30px;
 }
 @media (min-width: 768px) {
   .main .sections-container {
@@ -355,32 +354,176 @@ body {
     flex-wrap: wrap;
   }
 }
-.main .sections-container .section {
-  width: 100%;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .main .sections-container .section {
-    width: 45%;
-  }
-}
-.main .sections-container .section img {
+.main .sections-container .health-state-section-container {
+  display: flex;
   width: 100%;
 }
-.main .sections-container .section .section-name {
-  background-color: rgba(0, 0, 0, 0.3803921569);
-  padding: 10px;
+.main .sections-container .health-state-section-container .title-and-cards-section {
+  overflow-x: hidden;
+  width: 80%;
+}
+.main .sections-container .health-state-section-container .title-and-cards-section h3 {
+  padding-right: 5px;
+  color: #000000;
+  text-decoration: underline;
+  padding-top: 15px;
+}
+.main .sections-container .health-state-section-container .title-and-cards-section .cards-section {
+  display: flex;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.main .sections-container .health-state-section-container .title-and-cards-section .cards-section .card {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-right: 10px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.main .sections-container .health-state-section-container .title-and-cards-section .cards-section .card .health-state-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main .sections-container .health-state-section-container .title-and-cards-section .cards-section .card .health-state-img-container img {
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+}
+.main .sections-container .health-state-section-container .title-and-cards-section .cards-section .card h5 {
   text-align: center;
-  z-index: 6;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.main .sections-container .section .section-name h2 {
-  color: var(--bg-100);
-  font-size: 20px;
-  font-weight: normal;
+.main .sections-container .health-state-section-container .more-section {
+  width: 20%;
+  display: flex;
+  padding-right: 10px;
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 123, 255);
+  box-shadow: 4px 0 8px rgba(0, 123, 255, 0.5); /* Horizontal shadow only */
+}
+.main .sections-container .age-classify-section-container {
+  width: 100%;
+}
+.main .sections-container .age-classify-section-container h3 {
+  padding-right: 5px;
+  color: #000000;
+  text-decoration: underline;
+  padding-top: 15px;
+}
+.main .sections-container .age-classify-section-container .cards-section {
+  width: 100%;
+  display: flex;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  overflow-x: scroll;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #007bff #f0f0f0; /* Thumb color and track color */
+}
+.main .sections-container .age-classify-section-container .cards-section .age-card {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.main .sections-container .age-classify-section-container .cards-section .age-card h5 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main .sections-container .age-classify-section-container .cards-section::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height */
+}
+.main .sections-container .age-classify-section-container .cards-section::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Thumb color */
+  border-radius: 4px; /* Rounded edges */
+}
+.main .sections-container .age-classify-section-container .cards-section::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Track color */
+}
+.main .sections-container .from-a-to-z-container {
+  width: 100%;
+}
+.main .sections-container .from-a-to-z-container h3 {
+  padding-right: 5px;
+  color: #000000;
+  text-decoration: underline;
+  padding-top: 15px;
+}
+.main .sections-container .from-a-to-z-container .cards-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.main .sections-container .from-a-to-z-container .cards-section .card {
+  width: 20%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.main .sections-container .from-a-to-z-container .cards-section .card h4 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main .sections-container .categories-section-container {
+  width: 100%;
+}
+.main .sections-container .categories-section-container .title-and-cards-section {
+  width: 100%;
+}
+.main .sections-container .categories-section-container .title-and-cards-section h3 {
+  padding-right: 5px;
+  color: #000000;
+  text-decoration: underline;
+  padding-top: 15px;
+}
+.main .sections-container .categories-section-container .title-and-cards-section .cards-section {
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.main .sections-container .categories-section-container .title-and-cards-section .cards-section .card {
+  width: 20%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.main .sections-container .categories-section-container .title-and-cards-section .cards-section .card .health-state-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main .sections-container .categories-section-container .title-and-cards-section .cards-section .card .health-state-img-container img {
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+}
+.main .sections-container .categories-section-container .title-and-cards-section .cards-section .card h5 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .main .pagination {
   direction: ltr;

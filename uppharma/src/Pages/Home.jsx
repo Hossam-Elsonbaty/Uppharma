@@ -10,7 +10,6 @@ export default function Home() {
       <Swiper></Swiper>
       <TopSale></TopSale>
       <Sections></Sections>
-
       <Footer></Footer>
     </main>
   )
