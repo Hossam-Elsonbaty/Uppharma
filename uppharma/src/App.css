@@ -478,6 +478,36 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.main .sections-container .home-brands-section-container {
+  width: 100%;
+}
+.main .sections-container .home-brands-section-container h3 {
+  padding-right: 5px;
+  color: #000000;
+  text-decoration: underline;
+  padding-top: 15px;
+}
+.main .sections-container .home-brands-section-container .cards-section {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+.main .sections-container .home-brands-section-container .cards-section .card {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.main .sections-container .home-brands-section-container .cards-section .card div {
+  display: flex;
+  justify-content: center;
+}
+.main .sections-container .home-brands-section-container .cards-section .card div img {
+  width: 120px;
+  height: 120px;
+}
 .main .sections-container .categories-section-container {
   width: 100%;
 }

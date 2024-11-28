@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { Carousel } from 'antd';
 import product1 from '../Images/Done1.jpg';
 import product2 from '../Images/Done2.jpg';

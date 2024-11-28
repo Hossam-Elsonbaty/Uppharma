@@ -469,6 +469,36 @@ body{
         }
       }
     } 
+    .home-brands-section-container{
+      width: 100%;
+      h3{
+        padding-right: 5px;
+        color: #000000;
+        text-decoration: underline;
+        padding-top:15px ;
+      }
+      .cards-section{
+        width: 100%;
+        padding-top:15px ;
+        padding-bottom:30px ;
+        padding-left: 25%;
+        padding-right: 25%;
+        .card{
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          div{
+            display: flex;
+            justify-content: center;
+            img{
+              width: 120px;
+              height: 120px;
+            }
+          }
+        }
+      }
+    }
     .categories-section-container{
       width: 100%;
       .title-and-cards-section{

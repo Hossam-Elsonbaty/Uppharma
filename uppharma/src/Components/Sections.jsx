@@ -3,6 +3,7 @@ import HomeHealthStateSection from './HomeHealthStateSection';
 import HomeAgeClassifySection from './HomeAgeCassifySection';
 import FromAtoZSection from './FromAtoZSection';
 import HomeCategoriesSection from './HomeCategoriesSection';
+import HomeBrandsSection from './HomeBrandsSection';
 
 export default function Sections() {
   return (
@@ -10,6 +11,7 @@ export default function Sections() {
       <HomeHealthStateSection></HomeHealthStateSection>
       <HomeAgeClassifySection></HomeAgeClassifySection>
       <FromAtoZSection></FromAtoZSection>
+      <HomeBrandsSection></HomeBrandsSection>
       <HomeCategoriesSection></HomeCategoriesSection>
     </section>
   )
