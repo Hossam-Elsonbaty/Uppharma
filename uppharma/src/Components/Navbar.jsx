@@ -8,6 +8,8 @@ import { FaSearch } from 'react-icons/fa';
 import IsDesktop from "../Context/IsDesktop"
 import CartContext from "../Context/CartContext"
 import SearchBar from "./SearchBar";
+import ChangeLanguage from './ChangeLanguage';
+import ChangeCurrency from './ChangeCurrency';
 export default function Navbar() {
   const { getCartItemCount } = useContext(CartContext);
   const { isDesktop } = useContext(IsDesktop);
@@ -145,6 +147,8 @@ export default function Navbar() {
               <img src={logo} alt="err"/>
             </Link>
           </div>
+          <ChangeLanguage></ChangeLanguage>
+          <ChangeCurrency></ChangeCurrency>
           <div className="nav-bars" ref={navBarsRef} onClick={toggleMenu}>
             <span className='bar'></span>
             <span className='bar'></span>
