@@ -20,6 +20,7 @@
   --text-100:#000000;
   --text-200:#2c2c2c;
   --bg-White:#fff;
+  --bg-White-purple:#f1f0f6;
   --bg-100:#F7EEDD;
   --bg-200:#ede4d3;
   --bg-300:#c4bcab;
@@ -38,7 +39,7 @@
 }
 
 body{
-  background-color: var(--bg-white);
+  background-color: var(--bg-White-purple);
   direction: rtl;
   height: 100%;
   @include breakpoint(desktop){
@@ -80,7 +81,7 @@ body{
   box-shadow: 0 4px 12px 0 rgba(203, 203, 218, 5%);
   .first-navbar {
     // background-color: var(--primary-100);
-    background-color: #fff;
+    background-color: var(--bg-White-purple);
     width: 100%;
     color: white;
     .navbar-container {
@@ -89,7 +90,7 @@ body{
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      padding: 10px 20px;
+      padding: 16px 20px;
       @include breakpoint(desktop){
         padding: 10px 80px;
       }
@@ -129,11 +130,12 @@ body{
       }
       .search-bar {
         display: flex;
-        box-shadow: 0 0 6px 0px #0000002e;
-        padding: 10px;
+        // box-shadow: 0 0 6px 0px #0000002e;
+        padding:4px 10px;
         margin: 0 20px;
-        border-radius: 32px;
+        border-radius: 8px;
         width: 100%;
+        background-color: #fff;
         @include breakpoint(desktop){
           padding: 8px 10px;
           width: 40%;
@@ -344,6 +346,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0 1rem;
   @include breakpoint(desktop){
     gap: 20px;
   }
@@ -411,7 +414,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     @include breakpoint(desktop){
       flex-direction: row;
       justify-content: space-between;
@@ -457,6 +460,7 @@ body{
               text-align: center;
               padding-top: 10px;
               padding-bottom: 10px;
+              color: #000000ce;
             }
           }
         }
@@ -549,8 +553,8 @@ body{
       h3{
         padding-right: 5px;
         color: #000000;
-        text-decoration: underline;
-        padding-top:15px ;
+        // text-decoration: underline;
+        padding-top:0px ;
       }
       .cards-section{
         width: 100%;
@@ -562,6 +566,7 @@ body{
           padding-left: 10px;
           padding-right: 10px;
           border-radius: 10px;
+          border-radius: 12px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           div{
             display: flex;
@@ -581,8 +586,8 @@ body{
         h3{
           padding-right: 5px;
           color: #000000;
-          text-decoration: underline;
-          padding-top:15px ;
+          // text-decoration: underline;
+          padding-top:0px ;
         }
         .cards-section{
           width: 100%;
@@ -595,13 +600,13 @@ body{
           padding-bottom:30px ;
           .card{
             width: 20%;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 10px;
+            background-color: #fff;
+            padding: 10px 10px 0 10px;
             margin-bottom: 15px;
             margin-right: 10px; 
             border-radius: 0px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             .health-state-img-container{
               width: 100%;
               display: flex;
@@ -615,13 +620,14 @@ body{
             h5{
               text-align: center;
               padding-top: 10px;
+              font-weight: 900;
               padding-bottom: 10px;
+              color: rgb(0 0 0 / 47%);
             }
           }
         }
       }
     } 
-
   }
   // end sections 
   // start section page 

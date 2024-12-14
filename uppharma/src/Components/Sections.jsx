@@ -8,11 +8,11 @@ import HomeBrandsSection from './HomeBrandsSection';
 export default function Sections() {
   return (
     <section className='sections-container'>
+      <HomeCategoriesSection></HomeCategoriesSection>
       <HomeHealthStateSection></HomeHealthStateSection>
       <HomeAgeClassifySection></HomeAgeClassifySection>
       <FromAtoZSection></FromAtoZSection>
       <HomeBrandsSection></HomeBrandsSection>
-      <HomeCategoriesSection></HomeCategoriesSection>
     </section>
   )
 }

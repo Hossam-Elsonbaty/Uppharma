@@ -120,6 +120,25 @@ export default function Navbar() {
   ];
   return (
     <header className='nav-header'>
+      <nav className="second-navbar">
+        <div className="navbar-container">
+          <div className="logo">
+            <Link to="/">
+              <img src={logo} alt="err"/>
+            </Link>
+          </div>
+          {/* <ChangeLanguage></ChangeLanguage> */}
+          {/* <ChangeCurrency></ChangeCurrency> */}
+          <div className="nav-bars" ref={navBarsRef} onClick={toggleMenu}>
+            <span className='bar'></span>
+            <span className='bar'></span>
+            <span className='bar'></span>
+          </div>
+        </div>
+        <div ref={menuRef} >
+          <Menu items={menuItems} isOpen={isMenuOpen} />
+        </div>
+      </nav>
       <nav className="first-navbar">
         <div className="navbar-container">
           {isDesktop 
@@ -138,25 +157,6 @@ export default function Navbar() {
           :
             <SearchBar></SearchBar>
           }
-        </div>
-      </nav>
-      <nav className="second-navbar">
-        <div className="navbar-container">
-          <div className="logo">
-            <Link to="/">
-              <img src={logo} alt="err"/>
-            </Link>
-          </div>
-          <ChangeLanguage></ChangeLanguage>
-          <ChangeCurrency></ChangeCurrency>
-          <div className="nav-bars" ref={navBarsRef} onClick={toggleMenu}>
-            <span className='bar'></span>
-            <span className='bar'></span>
-            <span className='bar'></span>
-          </div>
-        </div>
-        <div ref={menuRef} >
-          <Menu items={menuItems} isOpen={isMenuOpen} />
         </div>
       </nav>
     </header>

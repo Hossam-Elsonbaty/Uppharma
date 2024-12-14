@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main className='main'>
       <Swiper></Swiper>
-      <TopSale></TopSale>
       <Sections></Sections>
+      <TopSale></TopSale>
       <Footer></Footer>
     </main>
   )
